@@ -1,4 +1,5 @@
 baseurl = "https://naelvis.github.io/refactored-happiness/"
+publishDir = "docs"
 title = "Hugo Themes - aether"
 author = "Joe Hutchinson"
 canonifyurls = true
