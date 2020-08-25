@@ -1,14 +1,14 @@
 baseurl = "https://naelvis.github.io/refactored-happiness/"
 publishDir = "docs"
-title = "Hugo Themes - aether"
-author = "Joe Hutchinson"
+title = "refactored happiness"
+author = "nelvis"
 canonifyurls = true
 paginate = 3
 theme = "aether"
 
 [params]
-    brand = "aether"
-    description = "aether Hugo theme for blogs"
+    brand = "r-h"
+    description = "first and foremost: what's in the glass?"
     bgimg = "img/ignasi_pattern_s.png"
 
 [markup]
