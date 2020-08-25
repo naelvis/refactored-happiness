@@ -1,33 +1,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories - Hugo Themes - aether</title>
-    <link>https://naelvis.github.io/refactored-happiness/categories/</link>
+    <link>/refactored-happiness/categories/</link>
     <description>Recent content in Categories on Hugo Themes - aether</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://naelvis.github.io/refactored-happiness/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/refactored-happiness/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Development</title>
-      <link>https://naelvis.github.io/refactored-happiness/categories/development/</link>
+      <link>/refactored-happiness/categories/development/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/categories/development/</guid>
+      <guid>/refactored-happiness/categories/development/</guid>
       <description></description>
     </item><item>
       <title>Features</title>
-      <link>https://naelvis.github.io/refactored-happiness/categories/features/</link>
+      <link>/refactored-happiness/categories/features/</link>
       <pubDate>Wed, 19 Dec 2018 10:35:35 -0500</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/categories/features/</guid>
+      <guid>/refactored-happiness/categories/features/</guid>
       <description></description>
     </item><item>
       <title>Web</title>
-      <link>https://naelvis.github.io/refactored-happiness/categories/web/</link>
+      <link>/refactored-happiness/categories/web/</link>
       <pubDate>Wed, 02 May 2018 14:33:42 -0400</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/categories/web/</guid>
+      <guid>/refactored-happiness/categories/web/</guid>
       <description></description>
     </item>
   </channel>

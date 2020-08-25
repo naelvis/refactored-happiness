@@ -1,33 +1,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts - Hugo Themes - aether</title>
-    <link>https://naelvis.github.io/refactored-happiness/posts/</link>
+    <link>/refactored-happiness/posts/</link>
     <description>Recent content in Posts on Hugo Themes - aether</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 19 Dec 2018 10:35:35 -0500</lastBuildDate>
     
-        <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Aether Features</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/aether-features/</link>
+      <link>/refactored-happiness/posts/aether-features/</link>
       <pubDate>Wed, 19 Dec 2018 10:35:35 -0500</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/posts/aether-features/</guid>
+      <guid>/refactored-happiness/posts/aether-features/</guid>
       <description>Hugo combined with the Aether theme turns easy to write markdown into powerful web pages.  KaTeX, Highlight.js, and Hugo provides the ability to create mathmatical symobols, equations, highlighted code, tables, lists, and much more.</description>
     </item><item>
       <title>Aether: A Clean Theme for Hugo</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/aether-theme/</link>
+      <link>/refactored-happiness/posts/aether-theme/</link>
       <pubDate>Wed, 02 May 2018 14:33:42 -0400</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/posts/aether-theme/</guid>
+      <guid>/refactored-happiness/posts/aether-theme/</guid>
       <description> Aether is new theme for Hugo that emphasizes motion, material, and depth as design elements. Distracting styling and page elements are forgone to focus on the content.</description>
     </item><item>
       <title>Creating a New Theme</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/creating-a-new-theme/</link>
+      <link>/refactored-happiness/posts/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/posts/creating-a-new-theme/</guid>
+      <guid>/refactored-happiness/posts/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
