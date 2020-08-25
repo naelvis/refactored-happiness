@@ -4,11 +4,18 @@
     <link>https://naelvis.github.io/refactored-happiness/categories/development/</link>
     <description>Recent content in Development on Hugo Themes - aether</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>My first post</title>
+      <link>https://naelvis.github.io/refactored-happiness/post/my-first-post/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/post/my-first-post/</guid>
+      <description></description>
+    </item><item>
       <title>(Hu)go Template Primer</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>

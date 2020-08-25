@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/posts/aether-features/</loc>
-    <lastmod>2018-12-19T10:35:35-05:00</lastmod>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/development/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/development/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/my-first-post/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/aether-features/</loc>
     <lastmod>2018-12-19T10:35:35-05:00</lastmod>
   </url>
   
@@ -48,11 +73,6 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://naelvis.github.io/refactored-happiness/categories/r/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
@@ -68,11 +88,6 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -84,16 +99,6 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
