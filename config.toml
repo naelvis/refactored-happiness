@@ -1,5 +1,6 @@
 baseurl = "https://naelvis.github.io/refactored-happiness/"
 publishDir = "docs"
+languageCode = "en"
 title = "refactored happiness"
 author = "nelvis"
 canonifyurls = true
