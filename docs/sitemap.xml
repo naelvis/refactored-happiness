@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/books/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/legenda/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/about/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
@@ -39,16 +59,6 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/my-second-post/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
