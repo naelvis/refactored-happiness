@@ -5,18 +5,11 @@
     <description>Recent content in Features on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Dec 2018 10:35:35 -0500</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/features/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>My second post</title>
-      <link>https://naelvis.github.io/refactored-happiness/post/my-second-post/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/post/my-second-post/</guid>
-      <description></description>
-    </item><item>
       <title>Aether Features</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/aether-features/</link>
       <pubDate>Wed, 19 Dec 2018 10:35:35 -0500</pubDate>

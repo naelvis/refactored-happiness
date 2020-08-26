@@ -5,7 +5,7 @@
     <description>Recent content in Categories on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,6 +15,13 @@
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/categories/r/</guid>
+      <description></description>
+    </item><item>
+      <title>Development</title>
+      <link>https://naelvis.github.io/refactored-happiness/categories/development/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/categories/development/</guid>
       <description></description>
     </item><item>
       <title>golang</title>

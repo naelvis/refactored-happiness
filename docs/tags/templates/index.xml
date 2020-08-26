@@ -5,18 +5,11 @@
     <description>Recent content in templates on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/templates/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>My second post</title>
-      <link>https://naelvis.github.io/refactored-happiness/post/my-second-post/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/post/my-second-post/</guid>
-      <description></description>
-    </item><item>
       <title>(Hu)go Template Primer</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>

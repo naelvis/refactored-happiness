@@ -8,12 +8,37 @@
   </url>
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/legenda/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/lesenotizen/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/man-and-his-symbols-c-g-jung-et-al/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
+    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/psychology/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,42 +53,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/development/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/development/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/features/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/general/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/my-first-post/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/my-second-post/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/templates/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,7 +63,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/features/</loc>
     <lastmod>2018-12-19T10:35:35-05:00</lastmod>
   </url>
   
@@ -133,6 +123,16 @@
   </url>
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
@@ -154,6 +154,11 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/hugo/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/templates/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
