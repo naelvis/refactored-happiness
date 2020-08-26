@@ -6,6 +6,7 @@ author = "nelvis"
 canonifyurls = true
 paginate = 10
 theme = "aether"
+googleAnalytics = "UA-176386889-1"
 
 [params]
     brand = "r-h"
