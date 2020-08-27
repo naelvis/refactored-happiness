@@ -10,8 +10,8 @@ googleAnalytics = "UA-176386889-1"
 
 [params]
     brand = "r-h"
-    description = "first and foremost: what's in the glass?"
-    bgimg = "img/212_light.png"
+    description = "my blog"
+    bgimg = "img/212_light_light.png"
 
 [markup]
   [markup.highlight]
