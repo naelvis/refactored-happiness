@@ -11,8 +11,8 @@ googleAnalytics = "UA-176386889-1"
 [params]
     brand = "r-h"
     description = "my blog"
-    homeimg = "img/85.jpg"
-    bgimg = "img/212_light_light.png"
+    homeimg = "img/boat_background.png"
+    bgimg = "img/85.jpg"
 
 [markup]
   [markup.highlight]
