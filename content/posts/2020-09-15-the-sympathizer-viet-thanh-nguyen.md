@@ -40,7 +40,7 @@ I highlighted a lot of parts in the book, because there were a ton of good, conc
 > What I'm saying, why I'm telling you all this, is that my life once had a meaning. It had a purpose. Now it has none. I was a son and a husband and a father and a soldier, and now I'm none of that. I'm not a man, and when a man isn't a man he's nobody.
 
 The last sentence is per se nonsensical, and yet it tells so much. This kind of thinking explains many irrational actions.
-* Later in the book, "King Cong" made me chuckle.\
+* Later in the book, "King Cong" made me chuckle.
 * More insighful paradoxes:
 
 > What am I dying for? he cried back. I'm dying because this world I'm living in isn't worth dying for! If something is worth dying for, then you've got a reason to live.
