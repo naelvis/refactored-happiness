@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Poetry - refactored happiness</title>
+    <link>https://naelvis.github.io/refactored-happiness/categories/poetry/</link>
+    <description>Recent content in Poetry on refactored happiness</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://naelvis.github.io/refactored-happiness/categories/poetry/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A permanent way - W. H. Auden</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/a-permanent-way-w-h-auden/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/a-permanent-way-w-h-auden/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
