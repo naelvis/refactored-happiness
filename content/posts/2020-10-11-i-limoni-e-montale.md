@@ -31,7 +31,7 @@ mezzo seccate agguantanoi ragazzi\
 qualche sparuta anguilla:\
 le viuzze che seguono i ciglioni,\
 discendono tra i ciuffi delle canne\
-e mettono negli orti, tra gli alberi dei limoni.\
+e mettono negli orti, tra gli alberi dei limoni.
 
 Meglio se le gazzarre degli uccelli\
 si spengono inghiottite dall'azzurro:\
@@ -59,7 +59,7 @@ nel profumo che dilaga\
 quando il giorno piú languisce.\
 Sono i silenzi in cui si vede\
 in ogni ombra umana che si allontana\
-qualche disturbata Divinità.\
+qualche disturbata Divinità.
 
 Ma l'illusione manca e ci riporta il tempo\
 nelle città rumorose dove l'azzurro si mostra\
