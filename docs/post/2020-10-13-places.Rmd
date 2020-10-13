@@ -10,7 +10,6 @@ description: ''
 dropCap: no
 displayInMenu: yes
 displayInList: no
-maps: true
 ---
 
 This map contains a list of places I would like to visit again.
@@ -25,7 +24,7 @@ library(viridis)
 Map <- read.csv("https://raw.githubusercontent.com/naelvis/refactored-happiness/rstudio/content/post/data/places.csv")
 ```
 
-```{r Map, eval = TRUE, include = TRUE, echo = FALSE}
+```{r Map, eval = TRUE, include = TRUE, echo = FALSE, out.width = '100%'}
 leaflet() %>%
   addTiles() %>%
   addCircleMarkers(
