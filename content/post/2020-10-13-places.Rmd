@@ -1,0 +1,46 @@
+---
+title: places
+author: nelvis
+date: '2020-10-13'
+slug: places
+categories: []
+tags:
+  - places
+description: ''
+dropCap: no
+displayInMenu: yes
+displayInList: no
+---
+
+This map contains a list of places I would like to visit again.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+
+library(tidyverse)
+library(leaflet)
+library(viridis)
+
+Map <- readRDS("./data/places.RDS")
+```
+
+```{r Map, eval = TRUE, include = TRUE, echo = FALSE}
+leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(
+    data = Map,
+    lng = ~ Longitude,
+    lat = ~ Latitude,
+    popup = ~ Label,
+    fillColor = ~ Color,
+    clusterOptions = markerClusterOptions()
+  ) %>% 
+  addLegend(position = "bottomright", 
+            pal = colorFactor(
+              viridis(
+                length(unique(Map$Type))),
+              Map$Type), 
+            values = Map$Type, 
+            labels = "Labels", 
+            title = "What?")
+```
