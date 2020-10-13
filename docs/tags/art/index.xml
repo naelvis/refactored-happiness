@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>art - refactored happiness</title>
-    <link>/refactored-happiness/tags/art/</link>
+    <link>https://naelvis.github.io/refactored-happiness/tags/art/</link>
     <description>Recent content in art on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 29 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="/refactored-happiness/tags/art/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://naelvis.github.io/refactored-happiness/tags/art/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Concerning the spiritual in art - W. Kandinskij</title>
-      <link>/refactored-happiness/posts/concerning-the-spiritual-in-art-w-kandinskij/</link>
+      <link>https://naelvis.github.io/refactored-happiness/posts/concerning-the-spiritual-in-art-w-kandinskij/</link>
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/refactored-happiness/posts/concerning-the-spiritual-in-art-w-kandinskij/</guid>
+      <guid>https://naelvis.github.io/refactored-happiness/posts/concerning-the-spiritual-in-art-w-kandinskij/</guid>
       <description></description>
     </item>
   </channel>
