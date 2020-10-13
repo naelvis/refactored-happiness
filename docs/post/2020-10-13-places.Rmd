@@ -10,6 +10,7 @@ description: ''
 dropCap: no
 displayInMenu: yes
 displayInList: no
+maps: true
 ---
 
 This map contains a list of places I would like to visit again.
