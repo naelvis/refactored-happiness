@@ -24,8 +24,8 @@ library(viridis)
 Map <- read.csv("https://raw.githubusercontent.com/naelvis/refactored-happiness/rstudio/content/post/data/places.csv")
 ```
 
-```{r Map, eval = TRUE, include = TRUE, echo = FALSE, out.width = '100%'}
-leaflet() %>%
+```{r Map, eval = TRUE, include = TRUE, echo = FALSE}
+leaflet(width = "100%") %>%
   addTiles() %>%
   addCircleMarkers(
     data = Map,
