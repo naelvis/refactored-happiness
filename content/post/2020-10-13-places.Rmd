@@ -21,7 +21,8 @@ library(tidyverse)
 library(leaflet)
 library(viridis)
 
-Map <- readRDS("./data/places.RDS")
+download.file("https://github.com/naelvis/refactored-happiness/tree/rstudio/content/post/data/places.RDS", "places.RDS")
+Map <- readRDS("places.RDS")
 ```
 
 ```{r Map, eval = TRUE, include = TRUE, echo = FALSE}
