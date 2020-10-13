@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts - refactored happiness</title>
-    <link>https://naelvis.github.io/refactored-happiness/post/</link>
+    <link>/refactored-happiness/post/</link>
     <description>Recent content in Posts on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://naelvis.github.io/refactored-happiness/post/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/refactored-happiness/post/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
