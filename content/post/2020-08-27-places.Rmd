@@ -14,10 +14,33 @@ displayInList: no
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
+
+library(tidyverse)
+library(leaflet)
+library(viridis)
+
+Map <- readRDS("./data/places.RDS")
 ```
 
-```{r, eval = TRUE}
-input <- readRDS("./assets/data/places.RDS")
+```{r Map, eval = TRUE, include = FALSE}
+leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(
+    data = Map,
+    lng = ~ Longitude,
+    lat = ~ Latitude,
+    popup = ~ Label,
+    fillColor = ~ Color,
+    clusterOptions = markerClusterOptions()
+  ) %>% 
+  addLegend(position = "bottomright", 
+            pal = colorFactor(
+              viridis(
+                length(unique(Map$Type))),
+              Map$Type), 
+            values = Map$Type, 
+            labels = "Labels", 
+            title = "What?")
 ```
 
 
