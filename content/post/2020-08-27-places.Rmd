@@ -12,6 +12,15 @@ displayInMenu: yes
 displayInList: no
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+```{r, eval = TRUE}
+input <- readRDS("./assets/data/places.RDS")
+```
+
+
 This map contains a list of places I would like to visit again. Click to open it!
 
 [![Map](/post/places/places.png)](https://www.google.com/maps/d/embed?mid=1YI1JNxiHIPf3uFbIH_dYMpTh2tKk1HAc)
