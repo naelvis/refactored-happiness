@@ -25,7 +25,7 @@ Map <- read.csv("https://raw.githubusercontent.com/naelvis/refactored-happiness/
 ```
 
 ```{r Map, eval = TRUE, include = TRUE, echo = FALSE}
-leaflet() %>%
+leaflet(width = "100%") %>%
   addTiles() %>%
   addCircleMarkers(
     data = Map,
