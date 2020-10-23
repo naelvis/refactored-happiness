@@ -11,17 +11,17 @@
     
     <item>
       <title>Posts</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/</guid>
+      <description></description>
+    </item><item>
+      <title>Posts</title>
       <link>https://naelvis.github.io/refactored-happiness/post/</link>
       <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/post/</guid>
-      <description></description>
-    </item><item>
-      <title>Posts</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/</link>
-      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/</guid>
       <description></description>
     </item>
   </channel>
