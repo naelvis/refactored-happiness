@@ -10,7 +10,6 @@ tags:
   - python
 description: ''
 toc: no
-dropCap: no
 displayInMenu: no
 displayInList: yes
 resources:
@@ -125,7 +124,6 @@ The second, arguably bigger, problem is that the bot stops running whenever my l
 I'm not really sure how everything is called in Python, and I don't have much experience progrmaming in it, so the code is quite suboptimal. Anyway, here it is:
 
 ```{python eval = FALSE}
-
 # General settings
 
 import telegram
