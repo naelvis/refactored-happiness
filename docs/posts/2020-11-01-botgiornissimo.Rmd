@@ -9,7 +9,6 @@ tags:
   - R
   - python
 description: ''
-toc: no
 displayInMenu: no
 displayInList: yes
 resources:
