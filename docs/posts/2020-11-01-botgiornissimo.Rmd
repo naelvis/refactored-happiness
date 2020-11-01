@@ -1,0 +1,207 @@
+---
+title: Botgiornissimo (v0.3)
+author: nelvis
+date: '2020-11-01'
+slug: botgiornissimo
+categories:
+  - Code
+tags:
+  - R
+  - python
+description: ''
+toc: no
+dropCap: no
+displayInMenu: no
+displayInList: yes
+resources:
+  name: featuredImage
+  src: ''
+  params:
+    description: ''
+---
+
+I've been experimenting with a telegram bot, I figured this might be as good a place as any to lay down the code for it and some thoughts about it.
+
+I started with an R version, sadly the R package that one uses to connect to the Telegram API does not have as many functionalities as the python version from which it's inspired - there is no function to send polls, and I wanted the bot to be able to send polls.
+
+The idea of the bot is to have cheesy "Good morning" images sent out, well, every morning. I was part of a group where they were usually - unironically - shared, and they're so bad they're good, in a way. The true mark of the kitsch.
+
+The R version of the bot had the images sent as a response to the command "/buongiornissimo". I still had the images stored locally on my computer, the bot took all the generic ones plus the ones linked to the particular day of the week - some of them read "Good Wednesday" or something like that - and then chose one at random. The code looks like this:
+
+```{r eval = FALSE}
+# General settings
+
+library(telegram.bot)
+library(magrittr)
+library(lubridate)
+
+bg_token <- Sys.getenv("BOTGIORNISSIMO_TOKEN")
+
+botgiornissimo <- Bot(token = bg_token)
+
+setwd("~/Documents/R/botgiornissimo")
+
+# buongiornissimo command
+
+buongiornissimo_df <- data.frame(Chat_id = 0,
+                                 Count = 0,
+                                 Time = Sys.time())
+
+buongiornissimo <- function(bot, update) {
+  
+  chat_id <- update$message$chat_id
+  
+  if(!(chat_id %in% buongiornissimo_df$Chat_id)) {
+    buongiornissimo_df <<- buongiornissimo_df %>%
+      mutate(Time = as_datetime(Time)) %>% 
+      add_row(
+        Chat_id = chat_id,
+        Count = 0,
+        Time = as_datetime(Sys.time())
+      )
+  }
+  
+  buongiornissimo_count <- buongiornissimo_df %>% filter(Chat_id == chat_id) %$% Count
+  buongiornissimo_time <- buongiornissimo_df %>% filter(Chat_id == chat_id) %$% Time
+  
+  if (day(as_datetime(buongiornissimo_time)) < day(Sys.time())) {
+    buongiornissimo_count <- 0
+  }
+  
+  if (buongiornissimo_count == 0) {
+    
+    buongiornissimo_df <<- buongiornissimo_df %>%
+      mutate(Count = ifelse(Chat_id == chat_id,
+                            1,
+                            Count),
+             Time = ifelse(Chat_id == chat_id,
+                           Sys.time(),
+                           Time))
+    
+    image <- switch(weekdays(Sys.time()),
+                     Monday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^LU|^X|^IMG)"),
+                     Tuesday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^MA|^X|^IMG)"),
+                     Wednesday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^ME|^X|^IMG)"),
+                     Thursday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^GI|^X|^IMG)"),
+                     Friday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^VE|^X|^IMG)"),
+                     Saturday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^SA|^X|^IMG)"),
+                     Sunday = list.files("./buongiornissimo") %>% 
+                       str_subset(pattern = "(^DO|^X|^IMG)"),
+                     ) %>% 
+      sample(1)
+    
+    bot$sendPhoto(chat_id = chat_id,
+                  photo = str_c("~/Documents/R/botgiornissimo/buongiornissimo/", image),
+                  sprintf("Buongiornissimo %s!", update$message$from$first_name))
+
+  } else {
+    bot$sendMessage(chat_id = update$message$chat_id,
+                    text = sprintf("Torna domani per un nuovo buongiornissimo!"))
+  }
+  
+}
+
+buongiornissimo_handler <- CommandHandler("buongiornissimo", buongiornissimo)
+
+updaterissimo <- Updater(token = bg_token) %>% 
+  add(buongiornissimo_handler)
+
+# Execute to start the bot
+updaterissimo$start_polling()
+
+```
+
+What happens it that the bot builds a dataset which has an entry for every open chat, and fills it with a 0 or 1 depending on whether that day it's already been asked to deliver a buongiornissimo. Depending on the status of the variable and the day one either gets an image or a message declining the request. The bot also addresses the user by name.
+
+The first problem here is that this is just marginally better than having to send an image every morning - you have to send a message whose consequence is that an image gets sent. My problem was that I kept forgetting sending the image, and I just as well kept forgetting sending the message.\
+The second, arguably bigger, problem is that the bot stops running whenever my laptop goes in standby. This can be solved by putting it somewhere on a server and have it run there - I googled around and this seemed easier to do with Python or Ruby than R, so I tried my hand with Python.
+
+I'm not really sure how everything is called in Python, and I don't have much experience progrmaming in it, so the code is quite suboptimal. Anyway, here it is:
+
+```{python eval = FALSE}
+
+# General settings
+
+import telegram
+import datetime
+import github
+import random
+import time
+
+g = github.Github("username", "password")
+repo = g.get_user().get_repo("repository")
+images = list(map(lambda x : x.path, repo.get_contents("repository_with_pictures")))
+urls = list(map(lambda x: "beginning of the URL" + x, images))
+names = list(map(lambda x : x[16:100], [x for x in images if not(x.endswith("Store"))]))
+image_dict = dict(zip(names, urls))
+
+bot = telegram.Bot(token="bot token") 
+
+from telegram.ext import Updater
+
+updater = Updater(token='1061726776:AAEutk9noExGZ2LFlkGWl7HoZjW7-a9FxY0', 
+                  use_context=True)
+
+# Start command
+
+def start(update, context):
+    
+    chat_id = update.effective_chat.id
+    
+    context.bot.send_message(chat_id, 
+                             text = "Botgiornissimo è stato attivato. (v0.3)")
+
+    while 1:
+        current_time=datetime.datetime.now()
+        hour = current_time.hour
+        weekday = current_time.weekday()
+        
+        if (weekday == 1) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("LU") | key.startswith("X") | key.startswith("IMG"))}
+        elif (weekday == 2) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("MA") | key.startswith("X") | key.startswith("IMG"))}
+        elif (weekday == 3) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("ME") | key.startswith("X") | key.startswith("IMG"))}
+        elif (weekday == 4) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("GI") | key.startswith("X") | key.startswith("IMG"))}
+        elif (weekday == 5) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("VE") | key.startswith("X") | key.startswith("IMG"))}
+        elif (weekday== 6) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("SA") | key.startswith("X") | key.startswith("IMG"))}
+        elif (weekday == 7) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("DO") | key.startswith("X") | key.startswith("IMG"))}
+        
+        image = random.choice(list(dict_subset.values()))
+        
+        if((hour == 7)):
+            bot.send_photo(chat_id=chat_id, 
+                           photo=image,
+                           caption = "Buongiornissimo!")
+            if (weekday == 3):
+                bot.send_poll(chat_id=chat_id, 
+                           question="Smashissimo questa settimana?",
+                           options = list("Venerdì alle 21", "Sabato alle 21", "No", "Altro (specificare)"),
+                           allow_multiple_answers = True)
+            time.sleep(43000)
+
+    
+from telegram.ext import CommandHandler
+start_handler = CommandHandler('start', start)
+dispatcher.add_handler(start_handler)
+
+updater.start_polling()
+```
+
+This time I had the images hosted on github, so that the bot can access them if it's hosted online somewhere. Python has dictionaries, so I built one having the names of the pictures as keys and their URL as values. From the keys one understands if an image is generic or relates to a particular day of the week, and filter the URLs accordingly. Just as before, a picture is then selected as random.
+
+The user does not need to write /buongiornissimo, they just have to start the bot. The bot keeps checking for the time, and at 7 AM sends a buongiornissimo picture and goes to sleep for something less than 12 hours - just to be safe -, then wakes up, waits until 7, sends the pictures and goes back to sleep. On Wednesdays it also sends a poll with options for weekend planning.
+
+The first problem is thus solved, but it generates a lot of other problems in turn. The bot is perennemente stuck in the while loop or sleeping, so that it can apparently only serve one chat at a time, and for the same reason cannot accept any other command. This isn't really functional and needs to be changed.
+
+As far as the second problem is concerned, I just found a software that keeps the laptop from going in standby. This is probably going to cause the death of my already elderly machine, but I hope it can survive until Black Friday and that I can get a Raspberry Pi by then... let's see.

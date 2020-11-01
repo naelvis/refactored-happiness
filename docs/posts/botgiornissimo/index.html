@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>Botgiornissimo (v0.3) &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/botgiornissimo/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Botgiornissimo (v0.3)</h1>
+          <p class="post-date">Posted <time datetime="2020-11-01">Nov 1, 2020</time></p>
+        </header>
+        
+        
+        
+
+<div id="TOC">
+no
+</div>
+
+<p>I’ve been experimenting with a telegram bot, I figured this might be as good a place as any to lay down the code for it and some thoughts about it.</p>
+<p>I started with an R version, sadly the R package that one uses to connect to the Telegram API does not have as many functionalities as the python version from which it’s inspired - there is no function to send polls, and I wanted the bot to be able to send polls.</p>
+<p>The idea of the bot is to have cheesy “Good morning” images sent out, well, every morning. I was part of a group where they were usually - unironically - shared, and they’re so bad they’re good, in a way. The true mark of the kitsch.</p>
+<p>The R version of the bot had the images sent as a response to the command “/buongiornissimo”. I still had the images stored locally on my computer, the bot took all the generic ones plus the ones linked to the particular day of the week - some of them read “Good Wednesday” or something like that - and then chose one at random. The code looks like this:</p>
+<pre class="r"><code># General settings
+
+library(telegram.bot)
+library(magrittr)
+library(lubridate)
+
+bg_token &lt;- Sys.getenv(&quot;BOTGIORNISSIMO_TOKEN&quot;)
+
+botgiornissimo &lt;- Bot(token = bg_token)
+
+setwd(&quot;~/Documents/R/botgiornissimo&quot;)
+
+# buongiornissimo command
+
+buongiornissimo_df &lt;- data.frame(Chat_id = 0,
+                                 Count = 0,
+                                 Time = Sys.time())
+
+buongiornissimo &lt;- function(bot, update) {
+  
+  chat_id &lt;- update$message$chat_id
+  
+  if(!(chat_id %in% buongiornissimo_df$Chat_id)) {
+    buongiornissimo_df &lt;&lt;- buongiornissimo_df %&gt;%
+      mutate(Time = as_datetime(Time)) %&gt;% 
+      add_row(
+        Chat_id = chat_id,
+        Count = 0,
+        Time = as_datetime(Sys.time())
+      )
+  }
+  
+  buongiornissimo_count &lt;- buongiornissimo_df %&gt;% filter(Chat_id == chat_id) %$% Count
+  buongiornissimo_time &lt;- buongiornissimo_df %&gt;% filter(Chat_id == chat_id) %$% Time
+  
+  if (day(as_datetime(buongiornissimo_time)) &lt; day(Sys.time())) {
+    buongiornissimo_count &lt;- 0
+  }
+  
+  if (buongiornissimo_count == 0) {
+    
+    buongiornissimo_df &lt;&lt;- buongiornissimo_df %&gt;%
+      mutate(Count = ifelse(Chat_id == chat_id,
+                            1,
+                            Count),
+             Time = ifelse(Chat_id == chat_id,
+                           Sys.time(),
+                           Time))
+    
+    image &lt;- switch(weekdays(Sys.time()),
+                     Monday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^LU|^X|^IMG)&quot;),
+                     Tuesday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^MA|^X|^IMG)&quot;),
+                     Wednesday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^ME|^X|^IMG)&quot;),
+                     Thursday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^GI|^X|^IMG)&quot;),
+                     Friday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^VE|^X|^IMG)&quot;),
+                     Saturday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^SA|^X|^IMG)&quot;),
+                     Sunday = list.files(&quot;./buongiornissimo&quot;) %&gt;% 
+                       str_subset(pattern = &quot;(^DO|^X|^IMG)&quot;),
+                     ) %&gt;% 
+      sample(1)
+    
+    bot$sendPhoto(chat_id = chat_id,
+                  photo = str_c(&quot;~/Documents/R/botgiornissimo/buongiornissimo/&quot;, image),
+                  sprintf(&quot;Buongiornissimo %s!&quot;, update$message$from$first_name))
+
+  } else {
+    bot$sendMessage(chat_id = update$message$chat_id,
+                    text = sprintf(&quot;Torna domani per un nuovo buongiornissimo!&quot;))
+  }
+  
+}
+
+buongiornissimo_handler &lt;- CommandHandler(&quot;buongiornissimo&quot;, buongiornissimo)
+
+updaterissimo &lt;- Updater(token = bg_token) %&gt;% 
+  add(buongiornissimo_handler)
+
+# Execute to start the bot
+updaterissimo$start_polling()</code></pre>
+<p>What happens it that the bot builds a dataset which has an entry for every open chat, and fills it with a 0 or 1 depending on whether that day it’s already been asked to deliver a buongiornissimo. Depending on the status of the variable and the day one either gets an image or a message declining the request. The bot also addresses the user by name.</p>
+<p>The first problem here is that this is just marginally better than having to send an image every morning - you have to send a message whose consequence is that an image gets sent. My problem was that I kept forgetting sending the image, and I just as well kept forgetting sending the message.<br />
+The second, arguably bigger, problem is that the bot stops running whenever my laptop goes in standby. This can be solved by putting it somewhere on a server and have it run there - I googled around and this seemed easier to do with Python or Ruby than R, so I tried my hand with Python.</p>
+<p>I’m not really sure how everything is called in Python, and I don’t have much experience progrmaming in it, so the code is quite suboptimal. Anyway, here it is:</p>
+<pre class="python"><code># General settings
+
+import telegram
+import datetime
+import github
+import random
+import time
+
+g = github.Github(&quot;username&quot;, &quot;password&quot;)
+repo = g.get_user().get_repo(&quot;repository&quot;)
+images = list(map(lambda x : x.path, repo.get_contents(&quot;repository_with_pictures&quot;)))
+urls = list(map(lambda x: &quot;beginning of the URL&quot; + x, images))
+names = list(map(lambda x : x[16:100], [x for x in images if not(x.endswith(&quot;Store&quot;))]))
+image_dict = dict(zip(names, urls))
+
+bot = telegram.Bot(token=&quot;bot token&quot;) 
+
+from telegram.ext import Updater
+
+updater = Updater(token=&#39;1061726776:AAEutk9noExGZ2LFlkGWl7HoZjW7-a9FxY0&#39;, 
+                  use_context=True)
+
+# Start command
+
+def start(update, context):
+    
+    chat_id = update.effective_chat.id
+    
+    context.bot.send_message(chat_id, 
+                             text = &quot;Botgiornissimo è stato attivato. (v0.3)&quot;)
+
+    while 1:
+        current_time=datetime.datetime.now()
+        hour = current_time.hour
+        weekday = current_time.weekday()
+        
+        if (weekday == 1) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;LU&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        elif (weekday == 2) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;MA&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        elif (weekday == 3) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;ME&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        elif (weekday == 4) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;GI&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        elif (weekday == 5) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;VE&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        elif (weekday== 6) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;SA&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        elif (weekday == 7) :
+            dict_subset = {key: value for key, value in image_dict.items() if (key.startswith(&quot;DO&quot;) | key.startswith(&quot;X&quot;) | key.startswith(&quot;IMG&quot;))}
+        
+        image = random.choice(list(dict_subset.values()))
+        
+        if((hour == 7)):
+            bot.send_photo(chat_id=chat_id, 
+                           photo=image,
+                           caption = &quot;Buongiornissimo!&quot;)
+            if (weekday == 3):
+                bot.send_poll(chat_id=chat_id, 
+                           question=&quot;Smashissimo questa settimana?&quot;,
+                           options = list(&quot;Venerdì alle 21&quot;, &quot;Sabato alle 21&quot;, &quot;No&quot;, &quot;Altro (specificare)&quot;),
+                           allow_multiple_answers = True)
+            time.sleep(43000)
+
+    
+from telegram.ext import CommandHandler
+start_handler = CommandHandler(&#39;start&#39;, start)
+dispatcher.add_handler(start_handler)
+
+updater.start_polling()</code></pre>
+<p>This time I had the images hosted on github, so that the bot can access them if it’s hosted online somewhere. Python has dictionaries, so I built one having the names of the pictures as keys and their URL as values. From the keys one understands if an image is generic or relates to a particular day of the week, and filter the URLs accordingly. Just as before, a picture is then selected as random.</p>
+<p>The user does not need to write /buongiornissimo, they just have to start the bot. The bot keeps checking for the time, and at 7 AM sends a buongiornissimo picture and goes to sleep for something less than 12 hours - just to be safe -, then wakes up, waits until 7, sends the pictures and goes back to sleep. On Wednesdays it also sends a poll with options for weekend planning.</p>
+<p>The first problem is thus solved, but it generates a lot of other problems in turn. The bot is perennemente stuck in the while loop or sleeping, so that it can apparently only serve one chat at a time, and for the same reason cannot accept any other command. This isn’t really functional and needs to be changed.</p>
+<p>As far as the second problem is concerned, I just found a software that keeps the laptop from going in standby. This is probably going to cause the death of my already elderly machine, but I hope it can survive until Black Friday and that I can get a Raspberry Pi by then… let’s see.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/posts/how-to-be-a-man-g-o-brien/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">How to be a man - G. O&#39;Brien</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-10-27 1027:00">Oct 27, 2020</time></p>
+      <p>#Lesenotizen </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>
