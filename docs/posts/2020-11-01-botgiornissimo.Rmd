@@ -112,6 +112,7 @@ updaterissimo <- Updater(token = bg_token) %>%
   add(buongiornissimo_handler)
 
 # Execute to start the bot
+
 updaterissimo$start_polling()
 
 ```
@@ -145,6 +146,7 @@ from telegram.ext import Updater
 
 updater = Updater(token='1061726776:AAEutk9noExGZ2LFlkGWl7HoZjW7-a9FxY0', 
                   use_context=True)
+dispatcher = updater.dispatcher
 
 # Start command
 
@@ -192,6 +194,8 @@ def start(update, context):
 from telegram.ext import CommandHandler
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
+
+# execute to activate bot
 
 updater.start_polling()
 ```

@@ -109,6 +109,7 @@ updaterissimo &lt;- Updater(token = bg_token) %&gt;%
   add(buongiornissimo_handler)
 
 # Execute to start the bot
+
 updaterissimo$start_polling()</code></pre>
 <p>What happens it that the bot builds a dataset which has an entry for every open chat, and fills it with a 0 or 1 depending on whether that day it’s already been asked to deliver a buongiornissimo. Depending on the status of the variable and the day one either gets an image or a message declining the request. The bot also addresses the user by name.</p>
 <p>The first problem here is that this is just marginally better than having to send an image every morning - you have to send a message whose consequence is that an image gets sent. My problem was that I kept forgetting sending the image, and I just as well kept forgetting sending the message.<br />
@@ -135,6 +136,7 @@ from telegram.ext import Updater
 
 updater = Updater(token=&#39;1061726776:AAEutk9noExGZ2LFlkGWl7HoZjW7-a9FxY0&#39;, 
                   use_context=True)
+dispatcher = updater.dispatcher
 
 # Start command
 
@@ -182,6 +184,8 @@ def start(update, context):
 from telegram.ext import CommandHandler
 start_handler = CommandHandler(&#39;start&#39;, start)
 dispatcher.add_handler(start_handler)
+
+# execute to activate bot
 
 updater.start_polling()</code></pre>
 <p>This time I had the images hosted on github, so that the bot can access them if it’s hosted online somewhere. Python has dictionaries, so I built one having the names of the pictures as keys and their URL as values. From the keys one understands if an image is generic or relates to a particular day of the week, and filter the URLs accordingly. Just as before, a picture is then selected as random.</p>
