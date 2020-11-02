@@ -49,13 +49,13 @@
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
 	
-  <title>Posts &middot; refactored happiness</title>
+  <title>Places Leaflet &middot; refactored happiness</title>
   <meta name="description" content="" />
   <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="r-h">
 <meta property="og:description" content="my blog">
-<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/post/">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/post/places-leaflet/">
 <meta property="og:site_name" content="r-h">
 <meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
 <meta name="twitter:card" content="summary">
@@ -72,7 +72,6 @@
   
   
   <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
-  <link rel="alternate" type="application/rss+xml" href="https://naelvis.github.io/refactored-happiness/post/index.xml" title="refactored happiness" />
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -95,7 +94,7 @@ if (!doNotTrack) {
 
 </head>
 
-  <body class="list-body">
+  <body class="single-body">
     <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
   <div class="hamburger-menu">
@@ -120,28 +119,79 @@ if (!doNotTrack) {
   </div>
 </nav>
 
-    <main class="card-container side-gutter">
-      <header class="list-header">
-        <h1 class="list-header-title">Posts</h1>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Places Leaflet</h1>
+          <p class="post-date">Posted <time datetime="2020-11-02">Nov 2, 2020</time></p>
+        </header>
         
-      </header>
+        
+        
+
+
+<p>More code: the map in the places page is built through the R library leaflet and via openstreetmap. The extra ingredient is a dataset with places - latitude, longitude and a description. Mine is <a href="https://raw.githubusercontent.com/naelvis/refactored-happiness/rstudio/content/post/data/places.csv">here</a>.</p>
+<p>The code looks like this:</p>
+<pre class="r"><code>leaflet(width = &quot;100%&quot;) %&gt;%
+  addTiles() %&gt;%
+  addCircleMarkers(
+    data = Map,
+    lng = ~ Longitude,
+    lat = ~ Latitude,
+    popup = ~ Label,
+    fillColor = ~ Color,
+    clusterOptions = markerClusterOptions()
+  ) %&gt;% 
+  addLegend(position = &quot;bottomright&quot;, 
+            pal = colorFactor(
+              viridis(
+                length(unique(Map$Type))),
+              Map$Type), 
+            values = Map$Type, 
+            labels = &quot;Labels&quot;, 
+            title = &quot;What?&quot;)</code></pre>
+<p>It’s a single pipe, nothing spectacular happens. Maybe more interesting: I had initially generated the map on Google Maps, when I wanted to download it from there I had to massage it a bit. Code:</p>
+<pre class="r"><code>Map &lt;- st_layers(&quot;places.kml&quot;) %&gt;%
+  {map_dfr(.$name,
+           ~ {read_sf(&quot;places.kml&quot;,
+                      layer = .x) %&gt;%
+               mutate(Type = .x)})} %&gt;% 
+  cbind(st_coordinates(.)) %&gt;% 
+  unclass() %&gt;% 
+  as.data.frame() %&gt;% 
+  select(Name, Type, X, Y) %&gt;% 
+  rename(Longitude = X, Latitude = Y) %&gt;% 
+  mutate(Type = fct_relevel(Type, &quot;Other&quot;, after = Inf),
+         Color = colorFactor(
+                  viridis(
+                    length(unique(.$Type))),
+                    .$Type)(.$Type),
+         Label = str_c(&quot;&lt;b&gt;&quot;, Name, &quot;&lt;/b&gt;&quot;))</code></pre>
+<p>This is a bit more complex, quite largely trial and error on my side. The only lasting takeaway is knowledge about the library <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis</a>.</p>
+
+      </article>
       
-      
+    </main>
+    <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/post/places-leaflet/" class="card blog-card" rel="bookmark" >
+  href="https://naelvis.github.io/refactored-happiness/post/places/" class="card blog-card" rel="bookmark" >
   
   <article class="card-body">
-    <h2 class="card-title">Places Leaflet</h2>
+    <h2 class="card-title">places</h2>
     <p class="card-text"></p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-02">Nov 2, 2020</time></p>
-      <p>#Code </p>
+      <p>Posted <time datetime="2020-10-13 1013:00">Oct 13, 2020</time></p>
+      <p></p>
     </div>
   </article>
 </a>
-    </main>
-    
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>

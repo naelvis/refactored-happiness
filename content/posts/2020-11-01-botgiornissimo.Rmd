@@ -162,19 +162,19 @@ def start(update, context):
         hour = current_time.hour
         weekday = current_time.weekday()
         
-        if (weekday == 1) :
+        if (weekday == 0) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("LU") | key.startswith("X") | key.startswith("IMG"))}
-        elif (weekday == 2) :
+        elif (weekday == 1) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("MA") | key.startswith("X") | key.startswith("IMG"))}
-        elif (weekday == 3) :
+        elif (weekday == 2) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("ME") | key.startswith("X") | key.startswith("IMG"))}
-        elif (weekday == 4) :
+        elif (weekday == 3) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("GI") | key.startswith("X") | key.startswith("IMG"))}
-        elif (weekday == 5) :
+        elif (weekday == 4) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("VE") | key.startswith("X") | key.startswith("IMG"))}
-        elif (weekday== 6) :
+        elif (weekday== 5) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("SA") | key.startswith("X") | key.startswith("IMG"))}
-        elif (weekday == 7) :
+        elif (weekday == 6) :
             dict_subset = {key: value for key, value in image_dict.items() if (key.startswith("DO") | key.startswith("X") | key.startswith("IMG"))}
         
         image = random.choice(list(dict_subset.values()))

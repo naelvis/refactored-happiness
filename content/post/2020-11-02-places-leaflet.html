@@ -1,0 +1,60 @@
+---
+title: Places Leaflet
+author: nelvis
+date: '2020-11-02'
+slug: places-leaflet
+categories:
+  - Code
+tags:
+  - R
+description: ''
+dropCap: no
+displayInMenu: no
+displayInList: yes
+resources:
+  name: featuredImage
+  src: ''
+  params:
+    description: ''
+---
+
+
+
+<p>More code: the map in the places page is built through the R library leaflet and via openstreetmap. The extra ingredient is a dataset with places - latitude, longitude and a description. Mine is <a href="https://raw.githubusercontent.com/naelvis/refactored-happiness/rstudio/content/post/data/places.csv">here</a>.</p>
+<p>The code looks like this:</p>
+<pre class="r"><code>leaflet(width = &quot;100%&quot;) %&gt;%
+  addTiles() %&gt;%
+  addCircleMarkers(
+    data = Map,
+    lng = ~ Longitude,
+    lat = ~ Latitude,
+    popup = ~ Label,
+    fillColor = ~ Color,
+    clusterOptions = markerClusterOptions()
+  ) %&gt;% 
+  addLegend(position = &quot;bottomright&quot;, 
+            pal = colorFactor(
+              viridis(
+                length(unique(Map$Type))),
+              Map$Type), 
+            values = Map$Type, 
+            labels = &quot;Labels&quot;, 
+            title = &quot;What?&quot;)</code></pre>
+<p>It’s a single pipe, nothing spectacular happens. Maybe more interesting: I had initially generated the map on Google Maps, when I wanted to download it from there I had to massage it a bit. Code:</p>
+<pre class="r"><code>Map &lt;- st_layers(&quot;places.kml&quot;) %&gt;%
+  {map_dfr(.$name,
+           ~ {read_sf(&quot;places.kml&quot;,
+                      layer = .x) %&gt;%
+               mutate(Type = .x)})} %&gt;% 
+  cbind(st_coordinates(.)) %&gt;% 
+  unclass() %&gt;% 
+  as.data.frame() %&gt;% 
+  select(Name, Type, X, Y) %&gt;% 
+  rename(Longitude = X, Latitude = Y) %&gt;% 
+  mutate(Type = fct_relevel(Type, &quot;Other&quot;, after = Inf),
+         Color = colorFactor(
+                  viridis(
+                    length(unique(.$Type))),
+                    .$Type)(.$Type),
+         Label = str_c(&quot;&lt;b&gt;&quot;, Name, &quot;&lt;/b&gt;&quot;))</code></pre>
+<p>This is a bit more complex, quite largely trial and error on my side. The only lasting takeaway is knowledge about the library <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis</a>.</p>

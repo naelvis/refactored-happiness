@@ -1,0 +1,68 @@
+---
+title: Places Leaflet
+author: nelvis
+date: '2020-11-02'
+slug: places-leaflet
+categories:
+  - Code
+tags:
+  - R
+description: ''
+dropCap: no
+displayInMenu: no
+displayInList: yes
+resources:
+  name: featuredImage
+  src: ''
+  params:
+    description: ''
+---
+
+More code: the map in the places page is built through the R library leaflet and via openstreetmap. The extra ingredient is a dataset with places - latitude, longitude and a description. Mine is [here](https://raw.githubusercontent.com/naelvis/refactored-happiness/rstudio/content/post/data/places.csv).
+
+The code looks like this:
+
+```{r eval = FALSE}
+leaflet(width = "100%") %>%
+  addTiles() %>%
+  addCircleMarkers(
+    data = Map,
+    lng = ~ Longitude,
+    lat = ~ Latitude,
+    popup = ~ Label,
+    fillColor = ~ Color,
+    clusterOptions = markerClusterOptions()
+  ) %>% 
+  addLegend(position = "bottomright", 
+            pal = colorFactor(
+              viridis(
+                length(unique(Map$Type))),
+              Map$Type), 
+            values = Map$Type, 
+            labels = "Labels", 
+            title = "What?")
+```
+
+It's a single pipe, nothing spectacular happens. Maybe more interesting: I had initially generated the map on Google Maps, when I wanted to download it from there I had to massage it a bit. Code:
+
+```{r eval = FALSE}
+Map <- st_layers("places.kml") %>%
+  {map_dfr(.$name,
+           ~ {read_sf("places.kml",
+                      layer = .x) %>%
+               mutate(Type = .x)})} %>% 
+  cbind(st_coordinates(.)) %>% 
+  unclass() %>% 
+  as.data.frame() %>% 
+  select(Name, Type, X, Y) %>% 
+  rename(Longitude = X, Latitude = Y) %>% 
+  mutate(Type = fct_relevel(Type, "Other", after = Inf),
+         Color = colorFactor(
+                  viridis(
+                    length(unique(.$Type))),
+                    .$Type)(.$Type),
+         Label = str_c("<b>", Name, "</b>"))
+
+```
+
+This is a bit more complex, quite largely trial and error on my side. The only lasting takeaway is knowledge about the library [viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html).
