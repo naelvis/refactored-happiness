@@ -186,7 +186,7 @@ def start(update, context):
             if (weekday == 3):
                 bot.send_poll(chat_id=chat_id, 
                            question="Smashissimo questa settimana?",
-                           options = list("Venerdì alle 21", "Sabato alle 21", "No", "Altro (specificare)"),
+                           options = ["Venerdì alle 21", "Sabato alle 21", "No", "Altro (specificare)"],
                            allow_multiple_answers = True)
             time.sleep(43000)
 
