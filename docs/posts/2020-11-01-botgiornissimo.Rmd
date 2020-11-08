@@ -187,7 +187,7 @@ def start(update, context):
                 bot.send_poll(chat_id=chat_id, 
                            question="Smashissimo questa settimana?",
                            options = ["Venerdì alle 21", "Sabato alle 21", "No", "Altro (specificare)"],
-                           allow_multiple_answers = True)
+                           allows_multiple_answers = True)
             time.sleep(43000)
 
     
