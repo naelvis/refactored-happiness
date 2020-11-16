@@ -38,7 +38,7 @@ Friends that have been friends indeed;\
 All his happier dreams came true --\
 A small old house, wife, daughter, son,\
 Grounds where plum and cabbage grew,\
-poets and Wits about him drew;\
+poets and wits about him drew;\
 'What then.?' sang Plato's ghost. 'What then?'
 
 The work is done,' grown old he thought,\
