@@ -31,25 +31,31 @@ A poem is mentioned, I googled it and liked it, so I leave it here:
 
 >Erinnerung - J. v. Eichendorff
 >
+>
 >1.
+>
 >
 >Lindes Rauschen in den Wipfeln,\
 >Vöglein, die ihr fernab fliegt,\
 >Bronnen von den stillen Gipfeln,\
->Sagt, wo meine Heimat liegt?
+>Sagt, wo meine Heimat liegt?\
+>
 > 
 >Heut im Traum sah ich sie wieder,\
 >Und von allen Bergen ging Solches\
 >Grüßen zu mir nieder,\
->Daß ich an zu weinen fing.
+>Daß ich an zu weinen fing.\
+>
 > 
 >Ach, hier auf den fremden Gipfeln:\
 >Menschen, Quellen, Fels und Baum,\
 >Wirres Rauschen in den Wipfeln\
->Alles ist mir wie ein Traum.
+>Alles ist mir wie ein Traum.\
+>
 > 
->2\
-> 
+>2.
+>
+>
 >Die fernen Heimathöhen,\
 >Das stille, hohe Haus,\
 >Der Berg, von dem ich gesehen\
@@ -63,7 +69,7 @@ Looking at the second strofa, what is Heimat? Il paesaggio, la casa, the memorie
 
 The last part is structured as one of these choose-your-own-adventure books, so of course I had to plot a graph:
 
-![Drachenort](/posts/2020-11-19-herkunft-s-stanišić_files/herkunft_3.png)
+![ ](/posts/2020-11-19-herkunft-s-stanišić_files/herkunft_3.png)
 
 I think one can try to guess how the book came to be. My path is in blue; it looks to me like starting 308 I stayed on the original path, for which branches were later created at 321 and 346. It's harder to say how this path must have been before, but I think 328, which is the only point with 3 diramations, must have been a part of it. There are two very quick ends around the beginning, 303, which probably serve the scope of explaining how the thing works.
 
