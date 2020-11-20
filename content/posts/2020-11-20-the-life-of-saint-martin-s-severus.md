@@ -9,7 +9,7 @@ tags:
   - books
 description: ''
 toc: no
-dropCap: yes
+dropCap: no
 displayInMenu: no
 displayInList: yes
 resources:
