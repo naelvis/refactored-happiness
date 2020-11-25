@@ -144,7 +144,7 @@ bot = telegram.Bot(token="bot token")
 
 from telegram.ext import Updater
 
-updater = Updater(token='1061726776:AAEutk9noExGZ2LFlkGWl7HoZjW7-a9FxY0', 
+updater = Updater(token="bot token, 
                   use_context=True)
 dispatcher = updater.dispatcher
 
