@@ -20,7 +20,7 @@ resources:
     description: ''
 ---
 
-I'm currently reading "Two Essays on Analytical Phychology" which contains two introductory articles by Jung on, well, analytical psychology. I finished the first one and there are already enough notes, so here goes; I'll update the post with notes from the second one appena riesco a finirlo.
+I'm currently reading "Two Essays on Analytical Phychology" which contains two introductory articles by Jung on, well, analytical psychology. I finished the first one and there are already enough notes, so here goes.
 
 I started looking for something more from Jung after reading Man and his symbols [(link)](https://naelvis.github.io/refactored-happiness/posts/man-and-his-symbols-c-g-jung-et-al/). What I was especially curious about was the characterization of shadow, animus and anima, which didn't really show up in this essay; it still was an interesting read.
 
