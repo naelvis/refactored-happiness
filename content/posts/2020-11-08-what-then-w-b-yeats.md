@@ -19,7 +19,7 @@ resources:
     description: ''
 ---
 
-What Then?
+What then?
 -----
 
 \
