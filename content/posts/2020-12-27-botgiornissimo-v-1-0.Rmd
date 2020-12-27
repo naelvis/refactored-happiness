@@ -1,0 +1,112 @@
+---
+title: Botgiornissimo (v 1.0)
+author: nelvis
+date: '2020-12-27'
+slug: botgiornissimo-v-1-0
+categories:
+  - Code
+tags:
+  - python
+  - R
+description: ''
+toc: no
+dropCap: yes
+displayInMenu: no
+displayInList: yes
+resources:
+  name: featuredImage
+  src: ''
+  params:
+    description: ''
+---
+
+# Intro
+
+I post here some extended documentation for botgiornissimo. The bot is relatively stable - not because there isn't anything more to do, but because I notoriously have the attention span of a pesce rosso, and I'm tired of tinkering with it for the moment; I'll get back to it at some point next year, and the aim of this documentation is to act as a reminder when the moment will come. It's hopefully also helpful for the wanderer who's trying to code a telegram bot in python and might accidentally find an answer to their questions in the post.
+
+# Basics
+
+The source code is posted [here](https://github.com/naelvis/botgiornissimo). What's missing from the repository are various tokens (APIs, Bot token usw.), the folder structure is also slightly different from the actual implementation, but only for the OCR part of the bot, for which there's ample Verbesserungsbedarf.\
+Given these caveats, the bot can be activated by running main.py. This script is kept as slender as possible, with the various functions being distributed in the modules in the moduli folder.
+
+The interdependcies between the various moduli and main sono rappresentate in questo grafo[^1]:
+
+```{r eval = TRUE, echo = FALSE}
+# Libraries
+library(tidyverse)
+library(igraph)
+library(ggraph)
+library(viridis)
+library(magrittr)
+
+# input file is called input, it has columns "source", "target" and "nelvis". "nelvis" is filled with 0 or 1 depending on whether I walked the corresponding edge.
+input <- read.delim("/Users/nelvis/Documents/R/refactored-happiness/content/posts/data/moduli.csv", sep = ";")
+
+# get list of vertices
+vertices <- input %>% 
+  pivot_longer(source:target, names_to = "vertices") %$% 
+  unique(value)
+
+# create the network object
+network <- graph_from_data_frame(d=input, vertices = vertices, directed=TRUE) 
+
+# plot
+ggraph(network, "fr") + 
+  geom_edge_link(aes(start_cap = label_rect(node1.name),
+                     end_cap = label_rect(node2.name)), 
+                 arrow = arrow(length = unit(1, 'mm'))) + 
+  geom_node_text(aes(label = name), parse = TRUE) +
+  scale_color_viridis_d() +
+  theme(legend.position = 'none')
+```
+
+The bot is called botgiornissimo, and the -issimo ending is a bit all over the place in the code, I thought it would give it a bit of colour.
+
+Some remarks on the graph:
+* Main is a target for every other vertex;
+* Tokens is a source for every other vertex;
+* Start and remote are connected to the same vertices in the same fashion;
+* Augurissimi and smashissimo could be joined in one vertex;
+* Ocrissimo is the only module which isn't directly connected to start or remote - start and remote excluded.
+
+## Functionalities
+
+The bot sends a good morning image on Saturday and Sunday at 9, and the picture of a frog on Wednesdays; special behaviour on given dates is coded in the augurissimi module.\
+For a given group, flagged through the tokens module, it sends a poll every Wednesday at 7, closes the poll and announces the results when every user casted a vote and tags the user who haven't voted at 12 (if any) asking them to vote. For the same group extremely basic ocr is performed through an R script, capturing the results of an SSBU match from a screenshot of the results screen.
+
+# Details on the moduli
+
+## tokens
+
+This script just reads various txt files which contain tokens used by the bot. It all looks likes this:
+
+```{r eval = FALSE, echo = TRUE}
+with open("tokens/github-token", "r") as f:
+    githubissimo = str(f.read())
+```
+
+So there isn't really too much to see here.
+
+## start and remote
+
+These two modules contain the functions to start the bot respectively for one's own chat and remotely for another user. The remote start only works for selected users - imported as tokens - and is practical to restart the bot on all the chat were it was active after taking it down for maintenance. Since both modules have the same functionality, they have the same dependencies.\
+Both modules import smashissimo and augurissimi, which contain respectively the poll/image functionality and the special events functionality; for them to be added to the job queue of the bot, they must be imported.
+
+## augurissimi
+
+A calendar with special dates is initialised, then a function executes special commands on that date - currently there's only one...
+
+## smashissimo
+
+Most things happen here. The bot initially sent buongiornissimo images every day of the week, the code was written with this behaviour in mind; the ladder of "if/else" statement should be rewritten as dictionary for decency reasons; when sending a reminder the bot can only access the user ID, but not the name, so users are just tagged as "Scimmia". While this might be perceived as offensive, it might just as well encourage the receiver to cast their vote timely in the following week.
+
+## ocrissimo
+
+When activated - explicitly from the user, which is why the only dependency is on tokens - it requires a screenshot with match results; the screenshot is saved locally and read by an R script, which in turn produces the results of the ocr as a .csv file. This .csv file is read and then posted on the chat.\
+As mentioned, the folder structure one needs is slightly different from the one of the repository, but it should be easily recoverable from the script.
+
+## main
+
+This just bundles all the functionalities together. The dispatcher at the end is fundamental for the functioning at the bot, and also practical for bookkeeping.
+
+[^1]: For the code see the Lesenotizen on Herkunft [here](https://naelvis.github.io/refactored-happiness/posts/herkunft-s-stanišić/).

@@ -1,0 +1,17 @@
+source;target;;;;;
+remote;main;;;;;
+start;main;;;;;
+augurissimi;main;;;;;
+tokens;main;;;;;
+smashissimo;main;;;;;
+ocrissimo;main;;;;;
+tokens;augurissimi;;;;;
+tokens;ocrissimo;;;;;
+tokens;remote;;;;;
+augurissimi;remote;;;;;
+smashissimo;remote;;;;;
+augurissimi;smashissimo;;;;;
+tokens;smashissimo;;;;;
+tokens;start;;;;;
+smashissimo;start;;;;;
+augurissimi;start;;;;;
