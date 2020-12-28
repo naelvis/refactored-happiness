@@ -64,6 +64,7 @@ ggraph(network, "fr") +
 The bot is called botgiornissimo, and the -issimo ending is a bit all over the place in the code, I thought it would give it a bit of colour.
 
 Some remarks on the graph:
+
 * Main is a target for every other vertex;
 * Tokens is a source for every other vertex;
 * Start and remote are connected to the same vertices in the same fashion;
