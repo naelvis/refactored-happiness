@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/cose/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/general/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/botgiornissimo-v-1-0/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
@@ -29,11 +49,6 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/r/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -94,11 +109,6 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/places-leaflet/</loc>
-    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
     <lastmod>2020-11-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -184,11 +194,6 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/about/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/general/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
