@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/art/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/code/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/mosaic/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/r/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
+    <lastmod>2021-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/articles/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
@@ -18,27 +53,12 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/die-hauptstadt-r-menasse/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/categories/lesenotizen/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,17 +93,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/code/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/python/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/r/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -170,11 +180,6 @@
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/this-is-how-you-lose-the-time-war-a-el-mohtar-m-gladstone/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/art/</loc>
-    <lastmod>2020-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>

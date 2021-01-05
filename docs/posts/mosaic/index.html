@@ -49,13 +49,13 @@
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
 	
-  <title>Posts &middot; refactored happiness</title>
+  <title>Mosaic &middot; refactored happiness</title>
   <meta name="description" content="" />
   <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="r-h">
 <meta property="og:description" content="my blog">
-<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/mosaic/">
 <meta property="og:site_name" content="r-h">
 <meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
 <meta name="twitter:card" content="summary">
@@ -72,7 +72,6 @@
   
   
   <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
-  <link rel="alternate" type="application/rss+xml" href="https://naelvis.github.io/refactored-happiness/posts/index.xml" title="refactored happiness" />
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -95,7 +94,7 @@ if (!doNotTrack) {
 
 </head>
 
-  <body class="list-body">
+  <body class="single-body">
     <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
   <div class="hamburger-menu">
@@ -121,129 +120,60 @@ if (!doNotTrack) {
   </div>
 </nav>
 
-    <main class="card-container side-gutter">
-      <header class="list-header">
-        <h1 class="list-header-title">Posts</h1>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Mosaic</h1>
+          <p class="post-date">Posted <time datetime="2021-01-05">Jan 5, 2021</time></p>
+        </header>
         
-      </header>
+        
+        
+
+
+<p>I recently opened a new repository <a href="https://github.com/naelvis/mosaic">here</a>, which an sich consists more or less of a single, chaotic script - but there is come conceptual content, so I thought I would write something down before forgetting about it.</p>
+<p>The idea for the script was simple: divide an image in square tiles, then, given a list of mosaic tiles on the market, find for each tile in which the picture has been divided the <em>most suitable</em> tile on the market to represent it. So the script produces a first suggestion on how to construct a mosaic starting from any given image and number of tiles, and you can then build on that. Sounds good, right?</p>
+<p>The non intuitive part is in fact formally defining “most suitable”. The naïve attempt at finding the most suitable tile could go like this:</p>
+<ol style="list-style-type: decimal">
+<li>Realize that every colour is a three dimensional vector (RGB);</li>
+<li>Average the three components over the image tile to obtain a single vector representing it;</li>
+<li>Select the mosaic tile for which the norm of the difference between the vector representing the mosaic tile and the vector representing the image tile is minimal.</li>
+</ol>
+<p>The fascinating fact is that this fails spectacularly, for the simple reason that the Euclidean norm is not the right norm for the RGB space (from the human eye’s, well, point of view), for whatever reasons. The problem of finding the right norm is not really easy, but luckily the question is general enough that somebody else already thought about it and found a good solution, so that you don’t need to worry too much about it.</p>
+<p>What I found amusing about the solution is that it does not consist in providing the right norm, but rather in moving around every vector so that the Euclidean distance between the shifted vectors equals the correct distance for the unshifted vectors. I was working with this source image:</p>
+<p><img src="https://naelvis.github.io/refactored-happiness/posts/2021-01-05-mosaic_files/input_post.png" alt="Source" />
+Which shifts to this:</p>
+<p><img src="https://naelvis.github.io/refactored-happiness/posts/2021-01-05-mosaic_files/shifted_post.png" alt="Shifted" />
+So the plan is of course to take the image, shift it, tile it, then shift it back. Clockwise, starting up left:</p>
+<p><img src="https://naelvis.github.io/refactored-happiness/posts/2021-01-05-mosaic_files/process_post.png" alt="Process" />
+Here’s a comparison between the output just presented and the one obtained following the naïve approach:</p>
+<div class="figure">
+<img src="https://naelvis.github.io/refactored-happiness/posts/2021-01-05-mosaic_files/comparison_post.png" alt="Comparison" />
+<p class="caption">Comparison</p>
+</div>
+
+      </article>
       
-      
+    </main>
+    <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/mosaic/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Mosaic</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-01-05">Jan 5, 2021</time></p>
-      <p>#Code </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
   href="https://naelvis.github.io/refactored-happiness/posts/birds-and-frogs-f-dyson/" class="card blog-card" rel="bookmark" >
   
   <article class="card-body">
     <h2 class="card-title">Birds and frogs - F. Dyson</h2>
     <p class="card-text"></p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-01-03">Jan 3, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/die-hauptstadt-r-menasse/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Die Hauptstadt - R. Menasse</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-01-03">Jan 3, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/shakespeare-s-royal-self-j-kirsch/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Shakespeare&#39;s royal self - J. Kirsch</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-12-29">Dec 29, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/botgiornissimo-v-1-0/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Botgiornissimo (v 1.0)</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-12-27">Dec 27, 2020</time></p>
-      <p>#Code </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/do-not-say-we-have-nothing-m-thien/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Do not say we have nothing - M. Thien</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-12-13">Dec 13, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/autopsychography-f-pessoa/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Autopsychography - F. Pessoa</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-28">Nov 28, 2020</time></p>
-      <p>#Poetry </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/the-relations-between-the-ego-and-the-unconscious-c-g-jung/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">The relations between the ego and the unconscious - C. G. Jung</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-28">Nov 28, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/on-the-psychology-of-the-unconscious-c-g-jung/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">On the psychology of the unconscious - C. G. Jung</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-25">Nov 25, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/the-life-of-saint-martin-s-severus/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">The life of Saint Martin - S. Severus</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-11-20">Nov 20, 2020</time></p>
+      <p>Posted <time datetime="2021-01-03 13:00">Jan 3, 2021</time></p>
       <p>#Lesenotizen </p>
     </div>
   </article>
 </a>
-    </main>
-    <nav class="pagination-nav side-padding">
       
-      <a href="https://naelvis.github.io/refactored-happiness/posts/page/2/" class="pagination-older pagination-text">Older Posts &gt;</a>
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
     </nav>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
