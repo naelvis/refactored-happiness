@@ -42,6 +42,6 @@ So the plan is of course to take the image, shift it, tile it, then shift it bac
 ![Process](/posts/2021-01-05-mosaic_files/process_post.png)
 Here's a comparison between the output just presented and the one obtained following the naïve approach:
 
-![Comparison](/posts/2021-01-05-mosaic_files/comparison_post.png)
+![](/posts/2021-01-05-mosaic_files/comparison_post.png)
 
 
