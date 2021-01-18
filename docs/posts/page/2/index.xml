@@ -5,11 +5,18 @@
     <description>Recent content in Posts on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The life of Saint Martin - S. Severus</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-life-of-saint-martin-s-severus/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-life-of-saint-martin-s-severus/</guid>
+      <description></description>
+    </item><item>
       <title>Herkunft - S. Stanišić</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/herkunft-s-stani%C5%A1i%C4%87/</link>
       <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Tue, 29 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/concerning-the-spiritual-in-art-w-kandinskij/</guid>
-      <description></description>
-    </item><item>
-      <title>A permanent way - W. H. Auden</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/a-permanent-way-w-h-auden/</link>
-      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/a-permanent-way-w-h-auden/</guid>
       <description></description>
     </item>
   </channel>

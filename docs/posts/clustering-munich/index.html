@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-	<meta name="generator" content="Hugo 0.74.3" />
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,13 +49,13 @@
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
 	
-  <title>refactored happiness</title>
-  <meta name="description" content="my blog" />
+  <title>Clustering Munich &middot; refactored happiness</title>
+  <meta name="description" content="" />
   <meta property="og:locale" content="en">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="r-h">
 <meta property="og:description" content="my blog">
-<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/clustering-munich/">
 <meta property="og:site_name" content="r-h">
 <meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
 <meta name="twitter:card" content="summary">
@@ -73,7 +72,6 @@
   
   
   <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
-  <link rel="alternate" type="application/rss+xml" href="https://naelvis.github.io/refactored-happiness/index.xml" title="refactored happiness" />
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -96,7 +94,7 @@ if (!doNotTrack) {
 
 </head>
 
-  <body class="list-body">
+  <body class="single-body">
     <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
   <div class="hamburger-menu">
@@ -122,87 +120,53 @@ if (!doNotTrack) {
   </div>
 </nav>
 
-    <main class="card-container side-gutter">
-      <header class="list-header">
-        <h1 class="list-header-title">refactored</h1>
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">Clustering Munich</h1>
+          <p class="post-date">Posted <time datetime="2021-01-18">Jan 18, 2021</time></p>
+        </header>
         
-      </header>
+        
+        
+<script src="https://naelvis.github.io/refactored-happiness/refactored-happiness/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>It so happens that I need to write a blog post as the final assignment of a Coursera specialization, so here goes - it will also be useful to jot down some of what I learned.</p>
+<p>This final project is a more or less free assignment, nach dem Motto fatti una domanda e datti una risposta. The only rule is that the question should be answerable by collecting geographic data and running k-means clustering.</p>
+<p>It’s not like the assignment pops out of nowhere - there are several examples along the course, and you can build on that. In one of these assignments the idea was to analyze the neighbourhoods of Toronto after being shown an example with the ones in Manhattan: You pick a table with neighbourhood names and coordinates, draw a ball around each coordinate, see what’s inside and check whether there’s some kind of natural clustering, whatever that means. Already back then I had tried to run the exercise with Munich, because I honestly don’t care that much about Toronto, except (as usual) real data is messier than precooked example.</p>
+<p>What happened in the Toronto dataset is that you had the city divided in postal codes and every postal code neatly divided in neighbourhood with tiny cute names and geographic coordinates; what happens in Munich is that there’s a complete mismatch between postal codes and neighbourhoods - postal code X covers part of neighbourhood A and part of neighbourhood B, neighbourhood A in its entirety covers part of postal code X and part of postal code Y -, and neighbourhood names seem to be composite of subneighbourhoods, but the internal subdivision is nowhere to be found.</p>
+<p>All of this is of course extremely irritating, so I thought I would create new neighbourhoods from scratch; you just draw a grid over the city, pick a ball around every grid point and then have the algorithm group the points together. Two remarks dazu:</p>
+<ul>
+<li>If you have a grid and draw balls around each point, you’re never going to have both the balls never intersecting and the full grid being covered. Setting the ball radius to be 75% of the grid step causes all of the grid to be covered while keeping intersections relatively low - but I also thought intersecting neighbourhoods were not that bad after all: if two neighbourhoods are close to each other I’d say they should have something in common for the very fact of being close to each other. This information is then partially passed on to the algorith by having points lying in the intersection;</li>
+<li>However, it turns out that’s not enough of a binding force to make connected clusters - and a quartiere has to be a connected cluster. If you just do a naïve run of the clustering without further information you do end up with one cluster having two connected components at the opposite parts of the city, which is of course not what you want. The solution is to feed also latitude and longitude to the algorithm, after the usual preprocessing.</li>
+</ul>
+<p>So you can run the algorithm and decide what number of clusters you like and so on and so forth. There isn’t really a “right” answer, but it was nice to toggle the parameter a bit and look at the results. In the end I settled for 28 clusters, which give the following picture:</p>
+<p><img src="https://naelvis.github.io/refactored-happiness/posts/2021-01-18-clustering-munich_files/kmeansmunchen.png" /></p>
+<p>The Gewerbegebiete in the north and the zoo in the south got nicely clustered, also the various bathing spots along the Isar got their own neighbourhood. You can download the map as html file <a href="https://github.com/naelvis/Coursera-Capstone/blob/main/munich_neighbourhoods.html">here</a> and play with it.</p>
+
+      </article>
       
-      
-      
-      
+    </main>
+    <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/concerning-the-spiritual-in-art-w-kandinskij/" class="card blog-card" rel="bookmark" >
+  href="https://naelvis.github.io/refactored-happiness/posts/mosaic/" class="card blog-card" rel="bookmark" >
   
   <article class="card-body">
-    <h2 class="card-title">Concerning the spiritual in art - W. Kandinskij</h2>
+    <h2 class="card-title">Mosaic</h2>
     <p class="card-text"></p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-09-29">Sep 29, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/a-permanent-way-w-h-auden/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">A permanent way - W. H. Auden</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-09-20">Sep 20, 2020</time></p>
-      <p>#Poetry </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/the-sympathizer-viet-thanh-nguyen/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">The sympathizer - Viet Thanh Nguyen</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-09-15">Sep 15, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/one-hundred-shadows-h-jungeun/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">One hundred shadows - H. Jungeun</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-09-04">Sep 4, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/a-piece-of-the-world-c-baker/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">A piece of the world - C. Baker</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-08-30">Aug 30, 2020</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/man-and-his-symbols-c-g-jung-et-al/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Man and his symbols - C. G. Jung et al.</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-08-26">Aug 26, 2020</time></p>
-      <p>#Lesenotizen </p>
+      <p>Posted <time datetime="2021-01-05 15:00">Jan 5, 2021</time></p>
+      <p>#Code </p>
     </div>
   </article>
 </a>
-    </main>
-    <nav class="pagination-nav side-padding">
-      <a href="https://naelvis.github.io/refactored-happiness/page/2/" class="pagination-newer pagination-text">&lt; Newer Posts</a>
       
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
     </nav>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
