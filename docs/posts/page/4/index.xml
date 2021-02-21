@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts - refactored happiness</title>
+    <link>https://naelvis.github.io/refactored-happiness/posts/</link>
+    <description>Recent content in Posts on refactored happiness</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Feb 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Man and his symbols - C. G. Jung et al.</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/man-and-his-symbols-c-g-jung-et-al/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/man-and-his-symbols-c-g-jung-et-al/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
