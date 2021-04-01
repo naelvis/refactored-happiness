@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>Voyage dans la lune - C. de Bergerac &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/voyage-dans-la-lune-c-de-bergerac/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/cose/" class="hamburger-menu-overlay-link">Cose</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Voyage dans la lune - C. de Bergerac</h1>
+          <p class="post-date">Posted <time datetime="2021-02-11">Feb 11, 2021</time></p>
+        </header>
+        
+        
+        <p>Calvino quoted it, and it wasn&rsquo;t long, so I thought I&rsquo;d give a try. I should also say that I have a probably unhealthy obsession with Rostand&rsquo;s Cyrano, which played a bigger role than I like to admit.</p>
+<p>So let&rsquo;s digress and outline the plot of Rostand&rsquo;s Cyrano.<br>
+<strong>Setting</strong>: Cyrano is the perfect man. Valliant, smart, strong, just, bright, courteous, everything. Except he has a big nose and is incredibly self-conscious about his nose, so that he beats up people that he thinks are looking too much at his nose, makes jokes about his own nose and then beats up those that laugh too much or too little, usw. Most importantly, he is madly in love with Rossana, but does not dare confessing his love to her because of course, how could she love somebody with such a
+big nose:</p>
+<blockquote>
+<p>Guardami in faccia e poi dimmi quale speranza<br>
+consentir mi potrebbe questa protuberanza!<br>
+Io non m&rsquo;illudo, no. - Talor certo, m&rsquo;avviene<br>
+d&rsquo;intenerirmi anch&rsquo;io nelle notti serene;<br>
+e se in qualche giardino entro, aspirando il maggio<br>
+con il mio poveraccio di naso, sotto un raggio<br>
+d&rsquo;argento qualche donna che passeggia a braccetto<br>
+di un cavaliere io seguo, e il cor mi balza in petto,<br>
+e penso, ahimè, che anch&rsquo;io vorrei meco averne una<br>
+per passeggiare a lenti passi sotto la luna,<br>
+e mi esalto, e m&rsquo;oblio&hellip; quand&rsquo;ecco all&rsquo;improvviso<br>
+l&rsquo;ombra del mio profilo su pel muro ravviso!</p>
+</blockquote>
+<p><strong>The plot begins</strong>: Cyrano meets Cristiano. Cristiano is something of a belloccio, quite average in everything except the fact that he&rsquo;s very handsome. He&rsquo;s not evil or anything. Cristiano falls in love with Rossana and Cyrano gets the idea that he could use Cristiano as a medium to declare his love - he&rsquo;ll write all the letters he always had wanted to write and Cristiano will pretend it&rsquo;s him writing them. So Cyrano gets to express his feelings and Cristiano gets the woman he loves:</p>
+<blockquote>
+<p>Noi si ha sempre in tasca di cotali<br>
+Lettere a delle Clori&hellip; puramente ideali;<br>
+perché noi siamo quelli che hanno per amante<br>
+un sogno nella bolla d&rsquo;un nome scintillante!&hellip;<br>
+Prendi: tu muterai le finzioni mie<br>
+in verità. Quest&rsquo;impeti, queste mie frenesie,<br>
+questi, che mi piaceva tanto a caso lanciare<br>
+timidi uccelli erranti, tu li farai posare.</p>
+</blockquote>
+<p><strong>Sviluppo</strong>: Two things happen.<br>
+First, Rossana tells Cyrano (they&rsquo;re friends) that Cristiano sends him such beautiful letters that she would love him even if he were ugly. This does not make Cyrano very happy, as we can imagine, but he&rsquo;s a man of honour, so he doesn&rsquo;t say anything. For what it matters, I doubt Rossana really means it, but it&rsquo;s nice how she remarks that Cristiano &ldquo;ha le Muse incostanti&rdquo;.<br>
+Second, afterwards, Cristiano and Cyrano go to war, and Cristiano è letalmente ferito. Cyrano is right next to him, and while they talk for the last time he asks whether he can tell Rossana the truth - but of course, Cristiano dies right as he is about to answer. So Cyrano does not get the permission to tell Rossana the truth. And Cyrano is a man of honour.</p>
+<p><strong>Ending</strong>: Now we cut to several years later, both Cyrano and Rossana grew old and Cyrano regularly visit Rossana to read her the letters that Cristiano wrote her while he was alive - that is, the letters Cyrano wrote her. So Cyrano is on the way to visit her, but then something trivial happens - a log falls from a balcony on his head, something like this -, but eh, Rossana comes first, so he just brushes it off and goes to read her a letter. He starts reading to Rossana, which at some point realizes that he is not actually looking at the paper, but rather knows it by heart, just like (it is now revealed) every letter that he ever wrote to her. At this point it becomes clear that the hit from the log is having serious consequences, and Cyrano dies just as Rossana realises the man that she actually loved just died in front her, rather than in war long long time ago, and she always had him next to her and never knew.<br>
+In one of the last lines, talking about falling leaves with Rossana:</p>
+<blockquote>
+<p>Come cadono piano<br>
+E bene! e come porre, vedete, ognuna sa<br>
+nel suo breve viaggio un&rsquo;ultima beltà;<br>
+e, malgrado il terrore d&rsquo;imputridire al suolo,<br>
+vuol che nella caduta sia la grazia d&rsquo;un volo.</p>
+</blockquote>
+<p>So this is what I remember of it, anyway. It&rsquo;s a great play, and while Cyrano rightfully steals the scene, all the characters have great depth. Cristiano suffers for being loved for what he is not, Rossana has to experience twice the death of the man he loves. The play also made his way to Italian pop music, with Guccini&rsquo;s <a href="https://www.youtube.com/watch?v=9WTYTrQ_EWk">Cyrano</a>, introducing the main character, and Vecchioni&rsquo;s <a href="https://www.youtube.com/watch?v=yLEP3dTeIJE">Rossana Rossana</a>, dealing with the relationship between Cyrano and Cristiano.</p>
+<p>At this point is clear that the book had to be a disappointment, just look at what kind of standard the guy had set up for him. Good to that he died prima che la gente iniziasse ad arabescare a caso sulle sue tribolazioni.<br>
+I think we can as a society all be happy that Cyrano&rsquo;s idea of sci-fi is not present anymore - some kind of Galileian discourse col pretesto di un&rsquo;avventura. The plot is the following: Cyrano wants to go to the moon, and after a first attempt in which he goes up in the sky but then falls back to Canada (he started from France, but while he went up and then fell down again the Earth was rotating below him) some kind of bone marrow trick manages to land him on the moon. There are several interesting ways of getting to the moon which are explained in the book, one I particularly liked involved magnets and went more or less like this: you sit on a magnetic chair and hold in your hand a big magnet so that the chair and the sphere attract each other; then you hold the magnet above your head while sitting on the chair, so that the chair goes toward the magnet (up) and in so doing pushes you up, and if you keep your arms straight you can keep travelling upwards for as much as you like. The traveller who recounts of this method admits that it&rsquo;s very tiring.<br>
+But as for the plot: he first lands in the Garden of Eden, then gets kicked out and enslaved by the humans living on the moon, which are just like us ma camminano a quattro zampe. A spirit from the Sun assists him and in the end brings him back to the Earth.<br>
+There are a bunch of noteworthy ideas in the book, for example a quite detailed description of audiobooks complete with headphones (the book was written in the 17th century), or the statement that you can actually nourish yourself just by smelling things, which explains, according to the author, why cooks are fat, or an explanation of how if you don&rsquo;t eat animals then you shouldn&rsquo;t eat cabbages either - if they don&rsquo;t have an immortal soul then for everything to be fair and balanced they have to have a very highly developed mortal soul, and that&rsquo;s what you&rsquo;re killing if you eat them, or a warning that you have to stay away from dogs for a while after you come back at the moon: they bark at it because they want to bite it, and you&rsquo;re up for a surprise if you walk around them smelling of moon.<br>
+There is also a part about noses - apparently humans on the moon show the time to each other by pointing the nose to the sky and turning their head so that the shadow of the nose on the teeth works like a meridiana, which you can then read. The author remarks that this can only work if you have a very large nose, to which il suo lunare interlocutore risponde:</p>
+<blockquote>
+<p>[&hellip;] after Thirty Ages experience we have observed, that a great Nose is the mark of a Witty, Courteous, Affable, Generous and Liberal Man; and that a little Nose is a Sign of the contrary: Wherefore of Flat Noses we make Eunuchs, because the Republick had rather have no Children at all than Children like them.</p>
+</blockquote>
+<p>The random capitalizations and teilweise merkwürdig ortography is übrigens like this in the text already.<br>
+The one thing I am going to mitnehmen from the book is the following sentence, which I looked up and liked even more in the French original:</p>
+<blockquote>
+<p>Quant au Mathématicien, me dit-il, ne vous y arrêtez point, car c’est un homme qui promet beaucoup, et qui ne tient rien.</p>
+</blockquote>
+<p>In the translation I have:</p>
+<blockquote>
+<p>&ldquo;As to the Mathematician,&rdquo; said he, &ldquo;let that be no hinderance to you; for he is a Man who promises much, and performs little or nothing.&rdquo;</p>
+</blockquote>
+<p>Fits nicely with Voltaire&rsquo;s &ldquo;La geometria è solo uno scherzo di cattivo gusto&rdquo;.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/posts/the-year-of-the-rabid-dragon-l-h-draken/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">The year of the rabid dragon - L.H. Draken</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2021-02-10 210:00">Feb 10, 2021</time></p>
+      <p>#Lesenotizen </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>

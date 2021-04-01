@@ -5,11 +5,18 @@
     <description>Recent content in Lesenotizen on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Apr 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Schachnovelle - S. Zweig</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/schachnovelle-s-zweig/</link>
+      <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/schachnovelle-s-zweig/</guid>
+      <description></description>
+    </item><item>
       <title>The committed - Viet Thanh Nguyen</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/the-committed-viet-thanh-nguyen/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
@@ -25,10 +32,10 @@
       <description></description>
     </item><item>
       <title>The unbearable lightness of being - M. Kundera</title>
-      <link>https://naelvis.github.io/refactored-happiness/post/the-unbearable-lightness-of-being-m-kundera/</link>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-unbearable-lightness-of-being-m-kundera/</link>
       <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/post/the-unbearable-lightness-of-being-m-kundera/</guid>
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-unbearable-lightness-of-being-m-kundera/</guid>
       <description></description>
     </item><item>
       <title>The shortest history of Germany - J. Hawes</title>
@@ -46,10 +53,10 @@
       <description></description>
     </item><item>
       <title>Voyage dans la lune - C. de Bergerac</title>
-      <link>https://naelvis.github.io/refactored-happiness/post/voyage-dans-la-lune-c-de-bergerac/</link>
+      <link>https://naelvis.github.io/refactored-happiness/posts/voyage-dans-la-lune-c-de-bergerac/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://naelvis.github.io/refactored-happiness/post/voyage-dans-la-lune-c-de-bergerac/</guid>
+      <guid>https://naelvis.github.io/refactored-happiness/posts/voyage-dans-la-lune-c-de-bergerac/</guid>
       <description></description>
     </item><item>
       <title>The year of the rabid dragon - L.H. Draken</title>
@@ -71,13 +78,6 @@
       <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/the-long-dark-tea-time-of-the-soul-d-adams/</guid>
-      <description></description>
-    </item><item>
-      <title>Dirk Gently&#39;s holistic detective agency - D. Adams</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/dirk-gently-s-holistic-detective-agency-d-adams/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/dirk-gently-s-holistic-detective-agency-d-adams/</guid>
       <description></description>
     </item>
   </channel>
