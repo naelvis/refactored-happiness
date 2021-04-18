@@ -31,7 +31,7 @@ Aught of its virtue, enriched by rain,\
 And warmed by the sun;\
 But yielded it all to the thrifty roots,\
 Through which it was drawn and whirled to the trunk,\
-And thence to the branches, and into the leavs,\
+And thence to the branches, and into the leaves,\
 Wherefrom the breeze took life and sang.\
 Now I, an under-tenant of the earth, can see\
 That the branches of a tree\
