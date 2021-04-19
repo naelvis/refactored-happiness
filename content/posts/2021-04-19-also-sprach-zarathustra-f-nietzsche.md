@@ -35,7 +35,7 @@ Ich würde nur an einen Gott glauben, der zu tanzen verstünde.
 Ich habe gehen gelernt: seitdem lasse ich mich laufen.
 
 > Libero da che cosa? Che importa questo a Zarathustra? Ma il tuo occhio deve limpidamente annunciarmi: libero **per che cosa**?\
-Frei wovon? Was schiert das Zarathustra! Hell aber soll mir dein Auge künden frei **wozu**?
+Frei wovon? Was schiert das Zarathustra! Hell aber soll mir dein Auge künden: frei **wozu**?
 
 > È più nobile darsi torto che farsi dare ragione, specie quando si ha ragione.\
 Vornehmer ist's, sich Unrecht zu geben als Recht zu behalten, sonderlich wenn man Recht hat.
