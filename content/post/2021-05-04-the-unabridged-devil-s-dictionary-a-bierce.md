@@ -1,5 +1,5 @@
 ---
-title: the-unabridged-devil-s-dictionary-a-bierce
+title: The unabridged Devil's dictionary - A. Bierce
 author: nelvis
 date: '2021-05-04'
 slug: the-unabridged-devil-s-dictionary-a-bierce
