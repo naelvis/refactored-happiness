@@ -23,10 +23,12 @@ I really liked the expression "the autumn of an elevator", it has something stea
 
 > SEINE, n. A type of internet for effecting an involuntary trade of environment. [...]
 
-I looked up the original definitions online, and of course it's fall rather than autumn and net rather than internet. I guess the word internet did not even exist when the book came out.
+I looked up the original definitions online, and of course it's fall rather than autumn and net rather than internet[^1]. I guess the word internet did not even exist when the book came out.
 
 It gets even worse, at some point there was "nation" instead of "notion". My theory is that somebody took a scan of the book, let some text recognition software convert it to text and then maybe changed it to British English?
 
 Terrible.
 
 > YEAR, n. A period of 3 hundred and sixty-5 disappointments.
+
+[^1]: And, for completeness, kind rather than type and change rather than trade.
