@@ -25,7 +25,7 @@ So at the end you can really ask yourself whether Möbius is crazy or not, and y
 
 Also interesting: the director of the institute turns out to be crazy in the end, just when we realise the people in the madhouse are actually sane. But the play might just as well have gone on a few more pages and turned everything on its head. We only see the room and we do not know of the world outside, which reinforces the idea of craziness being a relative concept. It always is, it just becomes clearer this way.
 
-Justice and what justice means is also important. Salomon is the king whose justness was legendary. Why does Möbius pretend to be seeing Salomon, of all possible figures? Is Salomon speaking to him because the spirit of justice/Berechtigkeit speaks to him, and he is sacrificing himself for justice? Why does the same Salomon appears to the director of the institute in the last pages?
+Justice and what justice means is also important. Salomon is the king whose justness was legendary. Why does Möbius pretend to be seeing Salomon, of all possible figures? Is Salomon talking with him because the spirit of justice/Berechtigkeit speaks to him, and he is sacrificing himself for justice? Why does the same Salomon appears to the director of the institute in the last pages?
 
 The role of reason is played by the inspector, who exits the play in its middle, exhasperated by the various events:
 
