@@ -3,37 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/books/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/lesenotizen/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/memories-dreams-reflections-c-g-jung/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/psychology/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
+    <lastmod>2021-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/barney-s-version-m-richter/</loc>
     <lastmod>2021-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/books/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/lesenotizen/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
-    <lastmod>2021-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
     <lastmod>2021-06-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -180,11 +190,6 @@
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/die-hauptstadt-r-menasse/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/psychology/</loc>
-    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
