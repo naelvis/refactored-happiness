@@ -17,7 +17,7 @@ I am pretty sure one of the reasons for the mental image I have of Cicerone is d
 
 It is interesting that it really isn't a nomen omen kind of thing. If memory does not fail me moving the pronunciation of C from K to Č was something the Church did - butchering Virgilio and burning non-compliant literature was apparently not enough damage -, the "-one" ending is a side product of the fact that Latin names arrived in Italian with the ablativ, and as far as I remember was not a majorative in the language. I looked up the origin of the name Cicero, and it comes from Cicer, i ceci. I suspect Marco Tullio Ceciaro, or something along these lines, would deliver a closer first impression of the surname to the original (my source is just Wikipedia).
 
-The book is divided in maniera relativamente netta in two parts which are closely related but barely interact. Cicerone is the protagonist of one of them, il cugino antico romano di Tracer Bullet covers the second. It is a good book.
+The book is divided in maniera relativamente netta in two parts which are closely related but barely interact. Cicerone is the protagonist of one of them, il cugino antico romano di Tracer Bullet covers the second. It is a good book. The first part more or less follows [this](https://en.wikisource.org/wiki/For_Sextus_Roscius_of_Ameria) orazione, also interesting.
 
 I cannot judge over historical accuracy and that would be beyond the point anyway, but this part sounded wrong to me:
 > "Sei milioni di sesterzi," ripeté Cicerone scandendo bene quella cifra enorme, la mano destra aperta accostata al pollice della mano sinistra: sei.
