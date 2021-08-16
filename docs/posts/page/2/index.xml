@@ -5,11 +5,18 @@
     <description>Recent content in Posts on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Aug 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>All men are mortal - S. de Beauvoir</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/all-men-are-mortal-s-de-beauvoir/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/all-men-are-mortal-s-de-beauvoir/</guid>
+      <description></description>
+    </item><item>
       <title>Schachnovelle - S. Zweig</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/schachnovelle-s-zweig/</link>
       <pubDate>Thu, 01 Apr 2021 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/lezioni-americane-i-calvino/</guid>
-      <description></description>
-    </item><item>
-      <title>The long dark tea-time of the soul - D. Adams</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-long-dark-tea-time-of-the-soul-d-adams/</link>
-      <pubDate>Fri, 29 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-long-dark-tea-time-of-the-soul-d-adams/</guid>
       <description></description>
     </item>
   </channel>
