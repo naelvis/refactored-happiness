@@ -53,12 +53,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/on-the-shortness-of-life-seneca/</loc>
-    <lastmod>2021-07-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/on-the-shortness-of-life-seneca/</loc>
     <lastmod>2021-07-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,7 +63,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/the-world-according-to-garp-j-irving/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/the-world-according-to-garp-j-irving/</loc>
     <lastmod>2021-06-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,7 +78,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/barney-s-version-m-richter/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/barney-s-version-m-richter/</loc>
     <lastmod>2021-06-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -98,12 +93,12 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/die-physiker-f-d%C3%BCrrenmatt/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/die-physiker-f-d%C3%BCrrenmatt/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/the-unabridged-devil-s-dictionary-a-bierce/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/the-unabridged-devil-s-dictionary-a-bierce/</loc>
     <lastmod>2021-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -118,7 +113,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/samuel-gardner-e-l-masters/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/samuel-gardner-e-l-masters/</loc>
     <lastmod>2021-04-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -244,6 +239,11 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/general/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url>
   
