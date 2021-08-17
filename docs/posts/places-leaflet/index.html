@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-	<meta name="generator" content="Hugo 0.74.3" />
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,13 +49,13 @@
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
 	
-  <title>refactored happiness</title>
-  <meta name="description" content="my blog" />
+  <title>Places Leaflet &middot; refactored happiness</title>
+  <meta name="description" content="" />
   <meta property="og:locale" content="en">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="r-h">
 <meta property="og:description" content="my blog">
-<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/places-leaflet/">
 <meta property="og:site_name" content="r-h">
 <meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
 <meta name="twitter:card" content="summary">
@@ -73,7 +72,6 @@
   
   
   <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
-  <link rel="alternate" type="application/rss+xml" href="https://naelvis.github.io/refactored-happiness/index.xml" title="refactored happiness" />
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -96,7 +94,7 @@ if (!doNotTrack) {
 
 </head>
 
-  <body class="list-body">
+  <body class="single-body">
     <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
   <div class="hamburger-menu">
@@ -122,131 +120,79 @@ if (!doNotTrack) {
   </div>
 </nav>
 
-    <main class="card-container side-gutter">
-      <header class="list-header">
-        <h1 class="list-header-title">refactored</h1>
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Places Leaflet</h1>
+          <p class="post-date">Posted <time datetime="2020-11-02">Nov 2, 2020</time></p>
+        </header>
         
-      </header>
+        
+        
+<script src="https://naelvis.github.io/refactored-happiness/refactored-happiness/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>More code: the map in the places page is built through the R library leaflet and via openstreetmap. The extra ingredient is a dataset with places - latitude, longitude and a description. Mine is <a href="https://raw.githubusercontent.com/naelvis/refactored-happiness/rstudio/content/post/data/places.csv">here</a>.</p>
+<p>The code looks like this:</p>
+<pre class="r"><code>leaflet(width = &quot;100%&quot;) %&gt;%
+  addTiles() %&gt;%
+  addCircleMarkers(
+    data = Map,
+    lng = ~ Longitude,
+    lat = ~ Latitude,
+    popup = ~ Label,
+    fillColor = ~ Color,
+    clusterOptions = markerClusterOptions()
+  ) %&gt;% 
+  addLegend(position = &quot;bottomright&quot;, 
+            pal = colorFactor(
+              viridis(
+                length(unique(Map$Type))),
+              Map$Type), 
+            values = Map$Type, 
+            labels = &quot;Labels&quot;, 
+            title = &quot;What?&quot;)</code></pre>
+<p>It’s a single pipe, nothing spectacular happens. Maybe more interesting: I had initially generated the map on Google Maps, when I wanted to download it from there I had to massage it a bit. Code:</p>
+<pre class="r"><code>Map &lt;- st_layers(&quot;places.kml&quot;) %&gt;%
+  {map_dfr(.$name,
+           ~ {read_sf(&quot;places.kml&quot;,
+                      layer = .x) %&gt;%
+               mutate(Type = .x)})} %&gt;% 
+  cbind(st_coordinates(.)) %&gt;% 
+  unclass() %&gt;% 
+  as.data.frame() %&gt;% 
+  select(Name, Type, X, Y) %&gt;% 
+  rename(Longitude = X, Latitude = Y) %&gt;% 
+  mutate(Type = fct_relevel(Type, &quot;Other&quot;, after = Inf),
+         Color = colorFactor(
+                  viridis(
+                    length(unique(.$Type))),
+                    .$Type)(.$Type),
+         Label = str_c(&quot;&lt;b&gt;&quot;, Name, &quot;&lt;/b&gt;&quot;))</code></pre>
+<p>This is a bit more complex, quite largely trial and error on my side. The only lasting takeaway is knowledge about the library <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis</a>.</p>
+
+      </article>
       
-      
-      
-      
+    </main>
+    <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/barney-s-version-m-richter/" class="card blog-card" rel="bookmark" >
+  href="https://naelvis.github.io/refactored-happiness/posts/botgiornissimo/" class="card blog-card" rel="bookmark" >
   
   <article class="card-body">
-    <h2 class="card-title">Barney&#39;s version - M. Richter</h2>
+    <h2 class="card-title">Botgiornissimo (v0.3)</h2>
     <p class="card-text"></p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-06-03">Jun 3, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/tecnica-mista-su-tappeto-f-battiato/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Tecnica mista su tappeto - F. Battiato</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-06-03">Jun 3, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/david-copperfield-c-dickens/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">David Copperfield - C. Dickens</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-05-26">May 26, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/die-physiker-f-d%C3%BCrrenmatt/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Die Physiker - F. Dürrenmatt</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-05-16">May 16, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/the-unabridged-devil-s-dictionary-a-bierce/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">The unabridged Devil&#39;s dictionary - A. Bierce</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-05-04">May 4, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/also-sprach-zarathustra-f-nietzsche/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Also sprach Zarathustra - F. Nietzsche</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-04-19">Apr 19, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/samuel-gardner-e-l-masters/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Samuel Gardner - E. L. Masters</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-04-18">Apr 18, 2021</time></p>
-      <p>#Poetry </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/all-men-are-mortal-s-de-beauvoir/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">All men are mortal - S. de Beauvoir</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-04-05">Apr 5, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/schachnovelle-s-zweig/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">Schachnovelle - S. Zweig</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-04-01">Apr 1, 2021</time></p>
-      <p>#Lesenotizen </p>
-    </div>
-  </article>
-</a><a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/the-committed-viet-thanh-nguyen/" class="card blog-card" rel="bookmark" >
-  
-  <article class="card-body">
-    <h2 class="card-title">The committed - Viet Thanh Nguyen</h2>
-    <p class="card-text"></p>
-    <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2021-03-14">Mar 14, 2021</time></p>
-      <p>#Lesenotizen </p>
+      <p>Posted <time datetime="2020-11-01 111:00">Nov 1, 2020</time></p>
+      <p>#Code </p>
     </div>
   </article>
 </a>
-    </main>
-    <nav class="pagination-nav side-padding">
-      <a href="https://naelvis.github.io/refactored-happiness/" class="pagination-newer pagination-text">&lt; Newer Posts</a>
-      <a href="https://naelvis.github.io/refactored-happiness/page/3/" class="pagination-older pagination-text">Older Posts &gt;</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
     </nav>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
