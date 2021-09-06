@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>The Superorganism - B. Holldöbler, E.O. Wilson &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/post/the-superorganism-b-holld%C3%B6bler-e-o-wilson/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/cose/" class="hamburger-menu-overlay-link">Cose</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">The Superorganism - B. Holldöbler, E.O. Wilson</h1>
+          <p class="post-date">Posted <time datetime="2021-09-06">Sep 6, 2021</time></p>
+        </header>
+        
+        
+        <p>I often explain that I think ant colonies should be regarded as a single &ldquo;discrete&rdquo; animal rather than many tiny animals, lately I realized somebody else must have had the same thought and wrote something about it if there was anything to it, which was the case. It is a very interesting book!</p>
+<p>My notes:</p>
+<ul>
+<li>
+<p>When learning something about animals, it is useful to make comparisons with 1. machines, 2. humans, so that one might learn something about them as well;</p>
+</li>
+<li>
+<p><strong>Machines</strong>. In explaining how the brain of an ant works, the authors says that it is essentially a decision tree. The architecture of the tree is predetermined by the genes, an initial weighting is partially provided, the weights are fine-tuned or determined during the ant&rsquo;s life. The resemblance with machine learning algorithms is striking and somebody must have thought about it, perhaps even when designing machine learning algorithms for the first time. The architecture corresponds to the fixed parameters (hyperparameters) of the algorithm, the weights being fine-tuned during the ant&rsquo;s life correspond to the usual parameters of the algorithm, fixed during training. So if we decide that an animal is essentially a machine learning algorithm, it might be worth looking into how nature solved the main problems of machine learning and working out some details:</p>
+<ol>
+<li><em>Local Minima</em>. To define a minimum one would need to define some kind of objective function, but we can say that nature is full of different evolutionary minima. I understand that crocodiles have essentially stop evolving, and for many species of ants that seems to be the case as well. The authors talk about &ldquo;points of no return&rdquo;: if, say, the wings atrophy and over generations disappear until there&rsquo;s only vestigial remains, they&rsquo;re quite unlikely to grow back - they would need to evolve independently again. This is a case of evolution getting stuck somewhere while exploring. This is not really solved in a strict sense, there are different animals that live in different equilibrium states;</li>
+<li><em>Hyperparameter Search</em>. It would be interesting to know more about this. How does the algorithm for the hyperparameter search look like? How drastically can the decision tree in an ant&rsquo;s brain change from generation to generation? Are there limitations on the number of changes? I would expect the algorithm to be based on chemistry and physics, and its limitations and features to be based on concrete chemical and physical limitations and laws. It would also be interesting to understand whether this hyperparameter search underwent natural selection as well, or if it is the same for all living beings (and always has been);</li>
+<li><em>Nesting Models</em>. So it would seem like nature is made up of concurring machine learning models that exchange information, literally feeding on each other. If a model performs very well and reproduces greatly, it becomes biologically convenient to feed on that model, since it is an abundant resource. Taking one step back, we actually have a very large machine with a lot of nested algorithms. We can say this for nature in general, but we could also just look at an ant colony. In the latter case it&rsquo;s always the same model being put in parallel with itself;</li>
+<li><em>Objective Function</em>. Say that we want to classify images, we can build up a machine learning algorithm, in fact a whole series of them, and let them evolve in parallel. With each epoch we trash the less successful algorithms, multiply the remaining ones and start the machine again - this would model the way nature works, we would get in the end several branches of algorithms interacting among each other. The problem is that animals do not have as task classifying images, where it is relatively easy to decide what success is. The objective seems to be to be able to reproduce oneself as much as possible and to perform all the parenting needed (possibly no parenting) to bring the offsprings at a level at which they can reproduce themselves. Then one can go on ad libitum. When we look at nature as a huge nested machine learning algorithm, we can ask what its objective function would be. The crudest theory about origin of life goes like this: there were chemical compounds that mirrored themselves for purely chemical reasons; then there were chemical compounds that mirrored themselves and were able to corrode other compounds, from which originated materials with which they ended up mirroring themselves; then there were compounds that mirrored themselves, corroded others and were resistent to corrosion; then came others that were even more effective in corroding; and one can bootstrap from here all the way to human beings. In this view it is really hard to talk about an objective - it is fascinating in that the only real ingredients it needs are the physical laws of attraction and repulsions, the fundamental forces. It is those physical forces that bring to the (of course fully unconcious) initial mirroring, which we find again at the end of the chain bootstrapped out of their mind to things like pleasure or love, in the same way as corroding and separating becomes hatred. So as such life would have no meaning, but would be able to evolve the ability of conferring itself one, if necessary to propagate itself. The objective function is a moving target, because the algorithm modifies the environment it inhabits, its predictions interact with the outside world and influence it. In the case where the predictions have a great impact on the outside world, the algorithm cannot evolve fast enough to match the pace of the outside changes. I would say this is what is happening with humans.</li>
+</ol>
+</li>
+<li>
+<p><strong>Humans</strong>. I think it is an instructive exercise to compare ant colonies and human colonies. Completely &ldquo;superorganistic&rdquo; ants:</p>
+<ol>
+<li>Are selfless, since they only reproduce through the queen of the colony;</li>
+<li>Regulate their societies by trying and keep information constantly flowing in all parts of the colony (queen health, availability of food, presence of enemies);</li>
+<li>Are highly specialized. The obvious example is the queen, but there are ants that serve as food reservoir, others that spend their time farming, others that just fight;</li>
+<li>Stopped evolving on the individual level, rather evolving on colony level. </li>
+</ol>
+<p>I don&rsquo;t see any way humans can evolve to live in true harmony as long as reproduction takes place through the individual. This leads to all sort of egoistic behaviour. Like for ants, this individual level of evolution can be suppressed by the colony level of evolution in case of external threats. Faced by avversities, only altruistic colonies survive. Human evolution has probably been influenced by both factors - in which measure, and how is this going to change? Consciousness is another topic. If an ant colony is a superorganism where the different ants recognize themselves as part of a whole, is it not evolving some kind of consciousness? What is consciousness anyway? A raven recognizing himself in a mirror shows consciousness? How can one prove thought, and how can one prove non-instinctive thought and free will? It is tempting to imagine consciousness as some kind of binary variable, but it must be something like a spectrum; it must also be realizable in different ways than the one humans experienced. One can dissect a brain and never find a thought, can the ants as superorganism be conscious even if none of them is? Right now I would say not, but it is thinkable, and it is what another form of sentient life might look like. The last point I want to add is about decision making. When ants or bees need to move to a new nest, scouts go around in different directions, then report back. Each of them make their case and try to convince as many fellows as possible to support them. We are at a classical life problem: a change is needed, there are a certain number of alternatives available (and an unknown number available but undiscovered), for these alternatives only partial information is available. What is the best way of going forward? The question might be unanswerable in general, the different kind of social insects seem to have developed the same strategy, meaning that all those who tried different strategies were not selected. The adopted strategy is: the first proposal that acquires a quorum gets selected, the quorum being set accordingly to how urgent the change is needed. This means that there is absolutely no guarantee that the decision met is the best one, time is a huge factor. The quorum is from what I understand well below the 50%, a vocal minority suffices; the fact that all ants/bees are essentially copies of one another is, I think, instrumental to the success of this kind of strategy. I also think it is interesting that not a single example is available of social insects selecting by exclusion the best one or waiting until a big majority settles on something - rapidity seems to be more important. I am partial to this judgement.</p>
+</li>
+</ul>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/post/cose/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">Cose</h2>
+    <p class="card-text">Things to own</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-12-28 1228:00">Dec 28, 2020</time></p>
+      <p></p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>
