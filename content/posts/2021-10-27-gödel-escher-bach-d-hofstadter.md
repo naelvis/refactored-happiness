@@ -2,7 +2,7 @@
 title: Gödel, Escher, Bach - D. Hofstadter
 author: nelvis
 date: '2021-10-27'
-slug: goedel-escher-bach-d-hofstadter
+slug: gödel-escher-bach-d-hofstadter
 categories:
   - Lesenotizen
 tags:
