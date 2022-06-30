@@ -1,8 +1,8 @@
 ---
-title: The star diaries - Stanislaw Lem
+title: The star diaries - S. Lem
 author: nelvis
 date: '2022-05-20'
-slug: the-star-diaries-stanislaw-lem
+slug: the-star-diaries-s-lem
 categories:
   - Lesenotizen
 tags:

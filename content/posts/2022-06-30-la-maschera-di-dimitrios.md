@@ -1,8 +1,8 @@
 ---
-title: La maschera di Dimitrios
+title: La maschera di Dimitrios - E. Ambler
 author: nelvis
 date: '2022-06-08'
-slug: la-maschera-di-dimitrios
+slug: la-maschera-di-dimitrios-e-ambler
 categories:
   - Lesenotizen
 tags:
