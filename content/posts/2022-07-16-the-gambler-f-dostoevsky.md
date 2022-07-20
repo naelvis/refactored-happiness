@@ -22,3 +22,15 @@ One could code the actions the protagonist takes - again, also outside of the ca
 The love for the gambling then would correspond outside of the casino to the love for Polina. Maybe it is also important to notice that she never actually plays roulette.
 
 I was less convinced of the interpretation while writing it down than I am now. Maybe there is something to it?
+
+A quote:
+
+> «[...] Ich bin trotz allem ganz sicher, dass ich, sobald es allein um mich geht, unbedingt gewinnen werde.»
+«Woher diese unbedingte Sicherheit?»
+«Mit Verlaub - ich weiß es nicht. Weiß nur, dass ich gewinnen *muss*, dass es ebenfalls mein einziger Ausweg ist. Daher kommt es vielleicht, dass ich so sicher bin.»
+
+Disregarding the probabilities and just looking at the outcomes is not necessarily a bad idea, but a very bad idea in the context of a casino, which is possibly the only place in the universe where one should unquestionably take the abstract computation of probabilities into account. That is probably the whole trick of the casino - that it only looks by chance, but it actually is probability.
+
+Mi è piaciuto questo proverbio:
+
+> Il faut que jeunesse se passe
