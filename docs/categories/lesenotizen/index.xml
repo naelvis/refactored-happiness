@@ -5,11 +5,18 @@
     <description>Recent content in Lesenotizen on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The Gambler - F. Dostoevsky</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-gambler-f-dostoevsky/</link>
+      <pubDate>Sat, 16 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-gambler-f-dostoevsky/</guid>
+      <description></description>
+    </item><item>
       <title>Alce Nero parla - J.G. Neihardt</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/alce-nero-parla-j-g-neihardt/</link>
       <pubDate>Tue, 28 Jun 2022 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/the-strangest-man-g-farmelo/</guid>
-      <description></description>
-    </item><item>
-      <title>Howards End - E. M. Forster</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/howards-end-e-m-forster/</link>
-      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/howards-end-e-m-forster/</guid>
       <description></description>
     </item>
   </channel>

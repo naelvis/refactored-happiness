@@ -5,11 +5,18 @@
     <description>Recent content in Posts on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Also sprach Zarathustra - F. Nietzsche</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/also-sprach-zarathustra-f-nietzsche/</link>
+      <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/also-sprach-zarathustra-f-nietzsche/</guid>
+      <description></description>
+    </item><item>
       <title>Samuel Gardner - E. L. Masters</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/samuel-gardner-e-l-masters/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/voyage-dans-la-lune-c-de-bergerac/</guid>
-      <description></description>
-    </item><item>
-      <title>The year of the rabid dragon - L.H. Draken</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-year-of-the-rabid-dragon-l-h-draken/</link>
-      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-year-of-the-rabid-dragon-l-h-draken/</guid>
       <description></description>
     </item>
   </channel>
