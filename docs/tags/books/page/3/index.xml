@@ -5,11 +5,18 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jul 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>L&#39;amica geniale - E. Ferrante</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/l-amica-geniale-e-ferrante/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/l-amica-geniale-e-ferrante/</guid>
+      <description></description>
+    </item><item>
       <title>The Aleph and other stories - J.L. Borges</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/the-aleph-and-other-stories-j-l-borges/</link>
       <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/david-copperfield-c-dickens/</guid>
-      <description></description>
-    </item><item>
-      <title>Die Physiker - F. Dürrenmatt</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/die-physiker-f-d%C3%BCrrenmatt/</link>
-      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/die-physiker-f-d%C3%BCrrenmatt/</guid>
       <description></description>
     </item>
   </channel>
