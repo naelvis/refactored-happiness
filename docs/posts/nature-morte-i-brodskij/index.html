@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>Nature Morte - I. Brodskij &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/nature-morte-i-brodskij/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/cose/" class="hamburger-menu-overlay-link">Cose</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Nature Morte - I. Brodskij</h1>
+          <p class="post-date">Posted <time datetime="2022-08-23">Aug 23, 2022</time></p>
+        </header>
+        
+        
+        <h2 id="nature-morte">Nature Morte</h2>
+<p><br>
+«Verrà la morte e avrà i tuoi occhi.»<br>
+C. Pavese\</p>
+<p>1<br>
+Things and people arise<br>
+Amongst us. And both are stark,<br>
+and both are hard on the eyes.<br>
+It’s best to live in the dark.<br>
+From a park bench, I spy<br>
+a family walking in-stride,<br>
+that quickly passes me by.<br>
+I am repulsed by light.<br>
+It’s January. Calendars mark<br>
+winter time. It is bleak.<br>
+Once I’m fed up with the dark,<br>
+I will begin to speak.\</p>
+<p>2<br>
+It’s time. I’m poised to begin.<br>
+It matters not where. Lips part.<br>
+I could as well keep it in.<br>
+Perhaps it’s better I start.<br>
+Of what? Of Nights. Of days.<br>
+Or – nothing of any kind.<br>
+Or, maybe, of things. To raise<br>
+things and to leave behind<br>
+people. None of whom will remain.<br>
+And I will die with them all.<br>
+This labor would be in vain.<br>
+A writing upon wind’s wall.\</p>
+<p>3<br>
+The blood in my veins is cold.<br>
+Its chill is more feral than<br>
+a river iced to its core.<br>
+I’m not very fond of man.<br>
+I don’t like their look. I shun<br>
+all people. Faces appear<br>
+to graft onto life an un-<br>
+ending, horrid veneer.<br>
+Something I find in them all<br>
+encloses my mind in gloom.<br>
+Something that tries to cajole<br>
+God only knows whom.\</p>
+<p>4<br>
+Things are nicer. They’re not<br>
+made out of evil or good<br>
+outwardly. And if you prod<br>
+into them – at their root.<br>
+Inside of all things – is dust.<br>
+Wood-borer beetles and<br>
+brittle mosquito grubs.<br>
+Uncomfortable to the hand.<br>
+Dust. Flick on the light,<br>
+and only dust is revealed.<br>
+Even if, to our sight,<br>
+things are hermetically sealed.\</p>
+<p>5<br>
+The old cabinet, too,<br>
+inside and outside, for me,<br>
+looks identical to<br>
+Notre Dame de Paris.<br>
+Darkness upon its shelves.<br>
+Dust mop and bishop’s stole<br>
+can’t wipe the dust. Itself,<br>
+the thing, doesn’t care at all,<br>
+it doesn’t try to refresh<br>
+or wipe clean a dusty spot.<br>
+For dust is surely time’s flesh;<br>
+time’s very flesh and blood.\</p>
+<p>6<br>
+Lately I simply collapse<br>
+to sleep in the light of day.<br>
+It is my death, perhaps,<br>
+trying to lead astray,<br>
+although I am breathing air,<br>
+bringing the mirror beside<br>
+my mouth, - how will I ever bear<br>
+not-being out in the light.<br>
+I am unmoving. My two<br>
+hips are ice-cold and thin.<br>
+Veins of a clear blue,<br>
+shine on my marble skin.\</p>
+<p>7<br>
+Surprising us with its form<br>
+and angles, the thing resorts<br>
+to quickly fall out from<br>
+the world order of all words.<br>
+A thing can’t stand or be on<br>
+the move. It’s absurd to think.<br>
+The thing is the space, beyond<br>
+which, there is no thing.<br>
+A thing can be dropped, burned,<br>
+pulled apart, or struck.<br>
+Thrown. But the thing, in turn,<br>
+won’t yell loudly: “Fuck!”\</p>
+<p>8<br>
+A tree. A shadow. The earth<br>
+for the roots underneath.<br>
+Monograms that curve.<br>
+Piles of rocks. Clay. Leaves.<br>
+Roots. Interweave and blend.<br>
+A stone, whose weight at once<br>
+frees from the prevalent<br>
+system of knots and bonds.<br>
+Unmovable. It cannot<br>
+be lifted or moved once set.<br>
+Shadow. A man in its spot,<br>
+just like a fish in a net.\</p>
+<p>9<br>
+The thing. And its brown<br>
+color. Its outlines blurred.<br>
+Twilight. Nothing around.<br>
+Nothing else. Nature mortes.<br>
+Death will come, discover<br>
+the body, whose calm will reflect<br>
+death’s visit like a lover’s,<br>
+with the same effect.<br>
+Skull, skeleton, sickle in hand –<br>
+this absurdity, all lies:<br>
+“Death will come and<br>
+she will have your eyes”\</p>
+<p>10<br>
+Mother to Christ, at a loss:\</p>
+<ul>
+<li>Are you my God or son?<br>
+You’re nailed onto the cross.<br>
+Tell me how to go on?<br>
+How can I go, having not<br>
+understood, grasped, derived:<br>
+are you my son or God?<br>
+That is, dead or alive?<br>
+He, in turn, explained:\</li>
+<li>Dead or alive, this time,<br>
+woman, it’s all the same.<br>
+Son or God, I’m thine.\</li>
+</ul>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/posts/the-fall-of-rome-w-h-auden/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">The Fall of Rome - W. H. Auden</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2022-08-23 823:00">Aug 23, 2022</time></p>
+      <p>#Poetry </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>
