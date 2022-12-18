@@ -160,7 +160,7 @@ The conversation is unedited. I also gave a shot at the prompts the bot suggeste
 ![Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting](https://github.com/naelvis/refactored-happiness/blob/rstudio/static/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot%202022-12-18%20at%2018.52.04.png)
 
 > **N**: one last thing and then it's really all - could you write a sonnet about the myth of er and the dreamtime?\
->
+>\
 > **B**: Certainly! Here is a sonnet inspired by the myth of Er and the concept of Dreamtime in Indigenous Australian cultures:\
 >\
 >The journey of the soul, a timeless quest,\
