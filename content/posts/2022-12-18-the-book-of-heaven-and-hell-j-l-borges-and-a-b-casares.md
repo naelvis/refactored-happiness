@@ -148,16 +148,16 @@ Overall, DALL-E is an innovative and powerful artificial intelligence system tha
 The conversation is unedited. I also gave a shot at the prompts the bot suggested - I specified that I wanted oil painting by appending ", oil painting" at the end of each because it meets my taste more. Since this is what everybody was doing last month anyway, I will post the results (from [DALL-E](https://labs.openai.com)) here:
 
 - "Generate an image of a soul traveling through the underworld and encountering the various realms of the dead, oil painting":
-!["Generate an image of a soul traveling through the underworld and encountering the various realms of the dead"](/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot 2022-12-18 at 18.46.19.png)
+!["Generate an image of a soul traveling through the underworld and encountering the various realms of the dead"](https://github.com/naelvis/refactored-happiness/blob/rstudio/static/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot%202022-12-18%20at%2018.46.19.png
 
 - "Generate an image that represents the process of seeking wisdom and self-discovery, oil painting"
-![Generate an image that represents the process of seeking wisdom and self-discovery, oil painting](/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot 2022-12-18 at 18.49.31.png)
+![Generate an image that represents the process of seeking wisdom and self-discovery, oil painting](https://github.com/naelvis/refactored-happiness/blob/rstudio/static/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot%202022-12-18%20at%2018.49.31.png)
 
 - "Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting"
-![Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting](/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot 2022-12-18 at 18.50.40.png)
+![Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting](https://github.com/naelvis/refactored-happiness/blob/rstudio/static/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot%202022-12-18%20at%2018.50.40.png)
 
 - "Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting"
-![Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting](/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot 2022-12-18 at 18.52.04.png)
+![Generate a painting that depicts the soldier Er and the choice he makes about his next life, oil painting](https://github.com/naelvis/refactored-happiness/blob/rstudio/static/posts/2022-12-18-the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares_files/Screenshot%202022-12-18%20at%2018.52.04.png)
 
 > **N**: one last thing and then it's really all - could you write a sonnet about the myth of er and the dreamtime?\
 >
