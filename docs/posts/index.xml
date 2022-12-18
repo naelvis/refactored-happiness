@@ -5,11 +5,18 @@
     <description>Recent content in Posts on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Dec 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The Book of Heaven and Hell - J.L. Borges and A.B. Casares</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares/</link>
+      <pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-book-of-heaven-and-hell-j-l-borges-and-a-b-casares/</guid>
+      <description></description>
+    </item><item>
       <title>Piranesi - S. Clarke</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/piranesi-s-clarke/</link>
       <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/nature-morte-i-brodskij/</guid>
-      <description></description>
-    </item><item>
-      <title>The Fall of Rome - W. H. Auden</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-fall-of-rome-w-h-auden/</link>
-      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-fall-of-rome-w-h-auden/</guid>
       <description></description>
     </item>
   </channel>

@@ -5,11 +5,18 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Dec 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Psychological types - C. G. Jung</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/psychological-types-c-g-jung/</link>
+      <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/psychological-types-c-g-jung/</guid>
+      <description></description>
+    </item><item>
       <title>It was snowing butterflies - C. Darwin</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/it-was-snowing-butterflies-c-darwin/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/barney-s-version-m-richter/</guid>
-      <description></description>
-    </item><item>
-      <title>Tecnica mista su tappeto - F. Battiato</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/tecnica-mista-su-tappeto-f-battiato/</link>
-      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/tecnica-mista-su-tappeto-f-battiato/</guid>
       <description></description>
     </item>
   </channel>
