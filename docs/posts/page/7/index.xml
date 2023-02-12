@@ -5,11 +5,18 @@
     <description>Recent content in Posts on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Dirk Gently&#39;s holistic detective agency - D. Adams</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/dirk-gently-s-holistic-detective-agency-d-adams/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/dirk-gently-s-holistic-detective-agency-d-adams/</guid>
+      <description></description>
+    </item><item>
       <title>Antifragile - N. N. Taleb</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/antifragile-n-n-taleb/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/autopsychography-f-pessoa/</guid>
-      <description></description>
-    </item><item>
-      <title>The relations between the ego and the unconscious - C. G. Jung</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-relations-between-the-ego-and-the-unconscious-c-g-jung/</link>
-      <pubDate>Sat, 28 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-relations-between-the-ego-and-the-unconscious-c-g-jung/</guid>
       <description></description>
     </item>
   </channel>

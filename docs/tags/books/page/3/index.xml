@@ -5,11 +5,18 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>La peste - A. Camus</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/la-peste-a-camus/</link>
+      <pubDate>Thu, 16 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/la-peste-a-camus/</guid>
+      <description></description>
+    </item><item>
       <title>Sette brevi lezioni sullo stoicismo - J. Sellars</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/sette-brevi-lezioni-sullo-stoicismo-j-sellars/</link>
       <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/omero-iliade-a-baricco/</guid>
-      <description></description>
-    </item><item>
-      <title>Gödel, Escher, Bach - D. Hofstadter</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/g%C3%B6del-escher-bach-d-hofstadter/</link>
-      <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/g%C3%B6del-escher-bach-d-hofstadter/</guid>
       <description></description>
     </item>
   </channel>
