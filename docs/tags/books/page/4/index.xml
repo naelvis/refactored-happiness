@@ -5,11 +5,39 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The strangest man - G. Farmelo</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-strangest-man-g-farmelo/</link>
+      <pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-strangest-man-g-farmelo/</guid>
+      <description></description>
+    </item><item>
+      <title>Howards End - E. M. Forster</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/howards-end-e-m-forster/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/howards-end-e-m-forster/</guid>
+      <description></description>
+    </item><item>
+      <title>L&#39;educazione - T. Westover</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/l-educazione-t-westover/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/l-educazione-t-westover/</guid>
+      <description></description>
+    </item><item>
+      <title>Omero, Iliade - A. Baricco</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/omero-iliade-a-baricco/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/omero-iliade-a-baricco/</guid>
+      <description></description>
+    </item><item>
       <title>Gödel, Escher, Bach - D. Hofstadter</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/g%C3%B6del-escher-bach-d-hofstadter/</link>
       <pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate>
@@ -50,34 +78,6 @@
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/it-was-snowing-butterflies-c-darwin/</guid>
-      <description></description>
-    </item><item>
-      <title>L&#39;amica geniale - E. Ferrante</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/l-amica-geniale-e-ferrante/</link>
-      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/l-amica-geniale-e-ferrante/</guid>
-      <description></description>
-    </item><item>
-      <title>The Aleph and other stories - J.L. Borges</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-aleph-and-other-stories-j-l-borges/</link>
-      <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-aleph-and-other-stories-j-l-borges/</guid>
-      <description></description>
-    </item><item>
-      <title>On the shortness of life - Seneca</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/on-the-shortness-of-life-seneca/</link>
-      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/on-the-shortness-of-life-seneca/</guid>
-      <description></description>
-    </item><item>
-      <title>Vite immaginarie - M. Schwob</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/vite-immaginarie-m-schwob/</link>
-      <pubDate>Wed, 14 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/vite-immaginarie-m-schwob/</guid>
       <description></description>
     </item>
   </channel>

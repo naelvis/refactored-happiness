@@ -5,11 +5,39 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Dschinns - F. Aydemir</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/dschinns-f-aydemir/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/dschinns-f-aydemir/</guid>
+      <description></description>
+    </item><item>
+      <title>Elizabeth Finch - J. Barnes</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/elizabeth-finch-j-barnes/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/elizabeth-finch-j-barnes/</guid>
+      <description></description>
+    </item><item>
+      <title>The investigation - S. Lem*</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-investigation-s-lem/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-investigation-s-lem/</guid>
+      <description></description>
+    </item><item>
+      <title>La biblioteca scomparsa - L. Canfora</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/la-biblioteca-scomparsa-l-canfora/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/la-biblioteca-scomparsa-l-canfora/</guid>
+      <description></description>
+    </item><item>
       <title>The secret history - D. Tartt</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/the-secret-history-d-tartt/</link>
       <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
@@ -50,34 +78,6 @@
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/post/jonathan-strange-mr-norrell-s-clarke/</guid>
-      <description></description>
-    </item><item>
-      <title>Piranesi - S. Clarke</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/piranesi-s-clarke/</link>
-      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/piranesi-s-clarke/</guid>
-      <description></description>
-    </item><item>
-      <title>Spitzweg - E. Nickel</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/spitzweg-e-nickel/</link>
-      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/spitzweg-e-nickel/</guid>
-      <description></description>
-    </item><item>
-      <title>The possibility of an island -  M. Houellebecq</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-possibility-of-an-island-m-houellebecq/</link>
-      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-possibility-of-an-island-m-houellebecq/</guid>
-      <description></description>
-    </item><item>
-      <title>The man from the future - A. Bhattacharya</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-man-from-the-future-a-bhattacharya/</link>
-      <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-man-from-the-future-a-bhattacharya/</guid>
       <description></description>
     </item>
   </channel>

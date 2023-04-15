@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>The investigation - S. Lem* &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/the-investigation-s-lem/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/cose/" class="hamburger-menu-overlay-link">Cose</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">The investigation - S. Lem*</h1>
+          <p class="post-date">Posted <time datetime="2023-04-15">Apr 15, 2023</time></p>
+        </header>
+        
+        
+        <p>I write these notes directly after typing those for Elizabeth Finch by Barnes, and I notice a similarity: in both cases I bought a book because I (assume I) liked another book from the same author and in both cases I am disappointed.</p>
+<p>But! For Solaris I think I remember more of the book, and I remember watching a peculiar and interesting Russian movie adaptation. And for Lem I remember having bought another book by him, being disappointed and having then learned that after Solaris everybody was angry at him because he kept writing things very different from Solaris. And in fact I had decided to not buy another book by him, except I found this one quoted somewhere strange - I think the appendix of the instructions of a calculator, which I am not sure why I was looking up in the first place -, and I can&rsquo;t even remember what quote it was, but still I had to read the book.</p>
+<p>A big difference with the book by Barnes is that here at least I get what the point of the book is, even if I disagree with the realizationa and even with the necessity of writing a book about it.<br>
+My understanding of the basic idea: Tension between the necessity by humans/human organizations of finding a culprit for an event versus unexplained and unknown (but by definition natural) behaviour of nature. ChatGPT&rsquo;s summary of the basic idea is: &ldquo;Embrace uncertainty, for reality defies simple explanations.&rdquo;, which is in the same ballpark.<br>
+Realization of this idea: There are corpses that seem to come back to life for a few minutes and walk around, so police looks for some weirdo making it look like that, instead it is concluded that it must have been a virus of something but we&rsquo;ll never know for sure.</p>
+<p>I did mark the final monologue from the investigator, which I copy here for future reference:</p>
+<blockquote>
+<p>You said that the natural order can be imitated. [&hellip;] But what if it isn&rsquo;t really that way? What if there isn&rsquo;t anything to imitate? What if the world isn&rsquo;t scattered around us like a jigsaw puzzle - what if it&rsquo;s like a soup with all kinds of things floating around in it, and from time to time some of them get stuck together by chance to make some kind of whole? What if everything that exists is fragmentary, incomplete, aborted, events with ends but no beginnings, events that only have middles, things that have fronts or rears but not both, with us constantly making categories, seeking out, and reconstructing, until we think we can see total love, total betrayal and defeat, although in reality we are all no more than hapazhard fractions. Our faces and our fates are shaped by statistics - we human beings are the resultant of Brownian motion - incomplete sketches, randomly outlined projections. Perfection, fullness, excellence are all rare exceptions - they occur only because there is such an excess, so unimaginably much of everything! THe daily commonplace is automatically regulated by the world&rsquo;s vastness, its infinite variety; because of it, what we see as gaps and breaches complement each other; the mind, for its own self-preservation, finds and integrates scattered fragments. Using religion and philosophy as the cement, we perpetually collect and assemble all the garbage comprised by statistics in order to make sense out of things, to make everything respond in one unified voice like a bell chiming to our glory. But it&rsquo;s only soup&hellip; The mathematical order of the universe is our answer to the pyramids of chaos. On every side of us we see bits of life that are completely beyond our understanding - we label them unusual, but we really don&rsquo;t want to acknowledge them. The only thing that really exist is statistics. The intelligent person is the statistical person. Will a child be beautiful or ugly? Will he enjoy music? Will he get cancer? It&rsquo;s all decided by a throw of the dice. At the very moment of our conception - statistics! Statistics determine which clusters of genes our bodies will be created from, statistics determine when we&rsquo;re going to die. A normal statistical distribution decides everything: whether I&rsquo;m going to meet a woman and fall in love, how long I&rsquo;m going to live, maybe even whether I&rsquo;m going to be immortal. From time to time, it may be, statistics participate in some things blindly, by accident - beauty and lameness, for example. But explicit processes will cease to exist before long: soon even despairy, beauty, happiness, and ugliness will result from statistics. Our knowledge is underlined by statistics - nothing exists except blind chance, the eternal arrangement of fortuitous patterns. An infinite number of Things taunt our foundness for Order. Seek, and ye shall find; in the end ye shall always find, if you only look with enough fervor, statistics doesn&rsquo;t exclude anything, and therefore it renders everything possible, or more or less probable. History, on the other hand, comes true by Brownian motion, a statistical dance of particles that never stop dreaming about another temporal world&hellip;</p>
+</blockquote>
+<p>I think there are some great insights in this monologue (the book is from 1974), one has to think about Kahnemann. I really respect that, and maybe this book even made sense when it was published - now I am not sure. Or does every book that made sense when it was published because of this fact make sense also now?</p>
+<p>Reading the monologue again, I think the quote in the manual was &ldquo;The intelligent person is the statistical person&rdquo;, and the appendix was about simple mathematical formulas one could use in the calculator. But I am not sure.
+So ok, whatever.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/posts/la-biblioteca-scomparsa-l-canfora/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">La biblioteca scomparsa - L. Canfora</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2023-04-10 410:00">Apr 10, 2023</time></p>
+      <p>#Lesenotizen </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>Dschinns - F. Aydemir &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/dschinns-f-aydemir/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/cose/" class="hamburger-menu-overlay-link">Cose</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Dschinns - F. Aydemir</h1>
+          <p class="post-date">Posted <time datetime="2023-04-15">Apr 15, 2023</time></p>
+        </header>
+        
+        
+        <p>Every summer in my youth I would go to this place in southern Italy where there was not much to do, so I was reading a lot, but also books were not always easy to find. Once I went with my parents to a town nearby (in the town where I was that year the last newspaper stand, which also sold books, had finally went out of business) looking for War and Peace, and when I asked at the newspaper stand there, which also also had books, the woman behind the counter asked me whether it was a weekly or a monthly magazine. It does not really have to do with anything but if I close my eyes I can still feel the despair.</p>
+<p>Anyway, another way I was passing time was by chatting with a man who sold rings and stones on the street, he came from Pakistan and was muslim and friendly tried to convert me. I appreciate still now how down-to-earth the reasonings were, for example: one needs to learn Arabic, not only because it&rsquo;s a beautiful language, but because that&rsquo;s the language that God speaks, and when one dies it is then interrogated by God, which asks questions in Arabic, and failure to answer leads to being sent to hell, and if you can&rsquo;t speak Arabic then you don&rsquo;t understand the question, and if you answer in your own language (not Arabic) that you don&rsquo;t understand God does not understand you either, and the end of this is that you&rsquo;re sent to hell. So you should learn Arabic.</p>
+<p>Does it sound absurd? Sure, but at least there&rsquo;s a logic to it. It&rsquo;s like having to learn German in order to be able to successfully conduct a job interview in Germany. You need to accept the initial religious assumptions about God and God only speaking one language, but that&rsquo;s what religion is for - a set of axioms. So I liked the discussions, becase you could proceed in very mathematical fashion - start from the hypothesis and see where it goes.</p>
+<p>Another thing he told me was about Dschinns, and I am sure that was not the name, but I think it&rsquo;s what it was, and this I found fascinating because it was completely pointless. So the religion says that there is another life form on Earth which is sentient, the Dschinns, and more or less analogous to humans, except they are invisible to us but we are not invisibile to them. I think they are closer to LOTR elves than humans - some have powers and I am not sure if they live longer, but you get the picture. They also go in front of God and all the heaven and hell discussion applies. And this does not really end up somewhere, it&rsquo;s more like a statement about dolphins, there is no bottom line, it&rsquo;s just something which is communicated, a piece of lore.</p>
+<p>Now of course Dschinns can interact with humans - in I guess undefined ways - and sometimes are benevolent sometimes not, but I want to emphasize that (the way it was explained to me) this is just something on the side, the level of detail that goes into characterising this species is completely superfluous if you had just needed an explanation for why bread and marmalade always falls on the marmalade side.</p>
+<p>Anyway about the book, I think it is narrated by one or more Dschinns, even if this is never explicitly stated, I think it is very well written and has a compelling narrative - what does this even mean -, I also thought female characters were extremely well written and nuanced, while male characters felt quite flat. I really liked this book.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/posts/elizabeth-finch-j-barnes/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">Elizabeth Finch - J. Barnes</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2023-04-15 415:00">Apr 15, 2023</time></p>
+      <p>#Lesenotizen </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>
