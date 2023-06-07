@@ -49,13 +49,13 @@
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
 	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
 	
-  <title>Botgiornissimo (v 1.0) &middot; refactored happiness</title>
+  <title>Histories - Herodotus &middot; refactored happiness</title>
   <meta name="description" content="" />
   <meta property="og:locale" content="en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="r-h">
 <meta property="og:description" content="my blog">
-<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/botgiornissimo-v-1-0/">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/histories-herodotus/">
 <meta property="og:site_name" content="r-h">
 <meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
 <meta name="twitter:card" content="summary">
@@ -121,80 +121,53 @@ if (!doNotTrack) {
 </nav>
 
     <main class="content side-text-padding">
-      <article class="post dropcase">
+      <article class="post ">
         <header class="post-header">
-          <h1 class="post-title">Botgiornissimo (v 1.0)</h1>
-          <p class="post-date">Posted <time datetime="2020-12-27">Dec 27, 2020</time></p>
+          <h1 class="post-title">Histories - Herodotus</h1>
+          <p class="post-date">Posted <time datetime="2023-05-20">May 20, 2023</time></p>
         </header>
         
         
-        
-<script src="https://naelvis.github.io/refactored-happiness/refactored-happiness/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-
-<div id="intro" class="section level2">
-<h2>Intro</h2>
-<p>I post here some extended documentation for botgiornissimo. The bot is relatively stable - not because there isn’t anything more to do, but because I notoriously have the attention span of a pesce rosso, and I’m tired of tinkering with it for the moment; I’ll get back to it at some point next year, and the aim of this documentation is to act as a reminder when the moment will come. It’s hopefully also helpful for the wanderer who’s trying to code a telegram bot in python and might accidentally find an answer to their questions in the post.</p>
-</div>
-<div id="basics" class="section level2">
-<h2>Basics</h2>
-<p>The source code is posted <a href="https://github.com/naelvis/botgiornissimo">here</a>. What’s missing from the repository are various tokens (APIs, Bot token usw.), the folder structure is also slightly different from the actual implementation, but only for the OCR part of the bot, for which there’s ample Verbesserungsbedarf.<br />
-Given these caveats, the bot can be activated by running main.py. This script is kept as slender as possible, with the various functions being distributed in the modules in the moduli folder.</p>
-<p>The interdependcies between the various moduli and main sono rappresentate in questo grafo<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
-<p><img src="https://naelvis.github.io/refactored-happiness/posts/data/moduli.png" /></p>
-<p>The bot is called botgiornissimo, and the -issimo ending is a bit all over the place in the code, I thought it would give it a bit of colour.</p>
-<p>Some remarks on the graph:</p>
-<ul>
-<li>Main is a target for every other vertex;</li>
-<li>Tokens is a source for every other vertex;</li>
-<li>Start and remote are connected to the same vertices in the same fashion;</li>
-<li>Augurissimi and smashissimo could be joined in one vertex;</li>
-<li>Ocrissimo is the only module which isn’t directly connected to start or remote - start and remote excluded.</li>
-</ul>
-</div>
-<div id="functionalities" class="section level1">
-<h1>Functionalities</h1>
-<p>The bot sends a good morning image on Saturday and Sunday at 9, and the picture of a frog on Wednesdays; special behaviour on given dates is coded in the augurissimi module.<br />
-For a given group, flagged through the tokens module, it sends a poll every Wednesday at 7, closes the poll and announces the results when every user casted a vote and tags the user who haven’t voted at 12 (if any) asking them to vote. For the same group extremely basic ocr is performed through an R script, capturing the results of an SSBU match from a screenshot of the results screen.</p>
-<div id="details-on-the-moduli" class="section level2">
-<h2>Details on the moduli</h2>
-</div>
-</div>
-<div id="tokens" class="section level1">
-<h1>tokens</h1>
-<p>This script just reads various txt files which contain tokens used by the bot. It all looks likes this:</p>
-<pre class="r"><code>with open(&quot;tokens/github-token&quot;, &quot;r&quot;) as f:
-    githubissimo = str(f.read())</code></pre>
-<p>So there isn’t really too much to see here.</p>
-</div>
-<div id="start-and-remote" class="section level1">
-<h1>start and remote</h1>
-<p>These two modules contain the functions to start the bot respectively for one’s own chat and remotely for another user. The remote start only works for selected users - imported as tokens - and is practical to restart the bot on all the chat were it was active after taking it down for maintenance. Since both modules have the same functionality, they have the same dependencies.<br />
-Both modules import smashissimo and augurissimi, which contain respectively the poll/image functionality and the special events functionality; for them to be added to the job queue of the bot, they must be imported.</p>
-</div>
-<div id="augurissimi" class="section level1">
-<h1>augurissimi</h1>
-<p>A calendar with special dates is initialised, then a function executes special commands on that date - currently there’s only one…</p>
-</div>
-<div id="smashissimo" class="section level1">
-<h1>smashissimo</h1>
-<p>Most things happen here. The bot initially sent buongiornissimo images every day of the week, the code was written with this behaviour in mind; the ladder of “if/else” statement should be rewritten as dictionary for decency reasons; when sending a reminder the bot can only access the user ID, but not the name, so users are just tagged as “Scimmia”. While this might be perceived as offensive, it might just as well encourage the receiver to cast their vote timely in the following week.</p>
-</div>
-<div id="ocrissimo" class="section level1">
-<h1>ocrissimo</h1>
-<p>When activated - explicitly from the user, which is why the only dependency is on tokens - it requires a screenshot with match results; the screenshot is saved locally and read by an R script, which in turn produces the results of the ocr as a .csv file. This .csv file is read and then posted on the chat.<br />
-As mentioned, the folder structure one needs is slightly different from the one of the repository, but it should be easily recoverable from the script.</p>
-</div>
-<div id="main" class="section level1">
-<h1>main</h1>
-<p>This just bundles all the functionalities together. The dispatcher at the end is fundamental for the functioning at the bot, and also practical for bookkeeping.</p>
-</div>
-<div class="footnotes footnotes-end-of-document">
-<hr />
-<ol>
-<li id="fn1"><p>For the code see the Lesenotizen on Herkunft <a href="https://naelvis.github.io/refactored-happiness/posts/herkunft-s-stanišić/">here</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-</ol>
-</div>
+        <p>I believe I have read something else between Dschinns and this book, but I now need to prepare the suitcase and would like to have it archived beforehand.</p>
+<p>The book stems from this bonkers idea that if you want to be a historian that&rsquo;s easy - just listen to what people tell you and write it down. The result is that you have things which are not only unbelievable, but also that the scope keeps varying. Some things would today be breaking news, some others would be in a box at page 10 of a local newspaper, and they&rsquo;re next to each other (Herodotus acknowledges this, his argument is essentially &ldquo;So what&rdquo;). The pleasant effect is of having somebody sitting next to you rambling about things, I would say it is oveall an enjoyable read.</p>
+<p>I liked this description of units of measure:</p>
+<blockquote>
+<p>The artaba is a Persian measure, and holds three choenixes more than the medimnus of the Athenians.</p>
+</blockquote>
+<p>Here the Babylonian take on medicine:</p>
+<blockquote>
+<p>They [The Babylonians] have no physicians, but when a man is ill, they lay him in the public square, and the passers-by come up to him, and if they have ever had his disease themselves or have known any one who has suffered from it, they give him advice, recommending him to do whatever they found good in their own case, or in the case known to them; and no one is allowed to pass the sick man in silence without asking him what his ailment is.</p>
+</blockquote>
+<p>Book 2, Paragraphs 2, 111 and 121 also are funny.</p>
+<p>Book 3, Paragraph 26 briefly mentions the story of Cambyses&rsquo; Lost Army:</p>
+<blockquote>
+<p>[&hellip;] the Ammonians relate as follows: That the Persians set forth from Oasis across the sand, and had reached about half way between that place and themselves, when, as they were at their midday meal, a wind arose from the south, strong and deadly, bringing with it vast columns of whirling sand, which entirely covered up the troops, and caused them wholly to disappear. Thus, according to the Ammonians, did it fare with this army.</p>
+</blockquote>
+<p>What surprises me is that this event is relatively famous, and from what I could understand this short and dry description is all we have. It does not seem to have more to it than many other similar stories present in that book, so why did it make the cut?</p>
+<p>Also interesting: Herodotus calls cotton &ldquo;tree-wool&rdquo; (3.47), which is also how Germans call it. According to Wiktionary they call it like this because of Herodotus, but then why did most of the other Europeans nations go with the Arab word?</p>
+<p>Interesting remark in Book 5, Paragraph 78:</p>
+<blockquote>
+<p>[&hellip;] it is plain enough, not from this instance only, but from many everywhere, that freedom is an excellent thing; since even the Athenians who, while they continued under the rule of tyrants, were not a whit more valiant than any of their neighbours, no sooner shook off the yoke than they became decidedly the first of all. These things show that, while undergoing oppression, they let themselves be beaten, since then they worked for a master; but so soon as they got their freedom, each man was eager to do the best he could for himself.</p>
+</blockquote>
+<p>Greek politics is a lot of fun, especially when one thinks that by modern standards the big cities back then were more or less villages. It&rsquo;s like children fighting. Here an extract from Book 6, Paragraph 107:</p>
+<blockquote>
+<p>[&hellip;] this they [The Lacedaemonians] said, not so much out of good will towards the Plataeans as because they wished to involve the Athenians in trouble by engaging them in wars with the Boeotians. The Plataeans, however, when the Lacedaemonians gave them this counsel, complied at once [&hellip;]. The Thebans no sooner learnt what the Plataeans had done than instantly they marched out against them, while the Athenians sent troops to their aid. As the two armies were about to join battle, the Corinthians, who chanced to be at hand, would not allow them to engage; both sides consented to take them for arbitrators, whereupon they made up the quarrel, and fixed the boundaryline between the two states upon this condition: to wit, that if any of the Boeotians wished no longer to belong to Boeotia, the Thebans should allow them to follow their own inclinations. The Corinthians, when they had thus decreed, forthwith departed to their homes: the Athenians likewise set off on their return; but the Boeotians fell upon them during the march, and a battle was fought wherein they were worsted by the Athenians. Hereupon these last would not be bound by the line which the Corinthians had fixed, but advanced beyond those limits, and made the Asopus the boundary line between the country of the Thebans and that of the Plataeans and Hysians.</p>
+</blockquote>
+<p>Advice from Artabanus in Book 7, Paragraph 47:</p>
+<blockquote>
+<p>Methinks it is best for men, when they take counsel, to be timorous, and imagine all possible calamities, but when the time for action comes, then to deal boldly.</p>
+</blockquote>
+<p>I am often frustrated when working with somebody who mixes the thinking and the doing. The general, long-term direction should be fixed exactly once and never be modified. It must be set broad enough that one can move inside the general direction without ahving need to modify it, but narrow enough that it is in fact a direction. When it is reached, one fixes a new one. To achieve the direction there are medium-term goals, who are a bit more narrow and shoudl also never be modified. Even if you think they are wrong, you adjust the direction while remaining in the stream, and power through it until you see the end. Then there are short-term goals, which are very precise and also not to be questioned, you just do them and if you did not find them useful you can set different ones. So there are two roles which must be well defined - the planner and the executor. Having the planner executing and the executor planning or switching constantly between the two is just chaotic, and chaos has a place in life, but it cannot be the whole place. Also order can&rsquo;t. But there can be chaos in order, while order in chaos is just a random occurrence.</p>
+<p>In Book 7, Paragraph 85 we learnt that the Persians had cowboys in their troops:</p>
+<blockquote>
+<p>It is not the wont of this people [The Sagartians] to carry arms, either of bronze or steel, except only a dirk; but they use lassoes made of thongs plaited together, and trust to these whenever they go to war. Now the manner in which they fight is the following: then they meet their enemy, straightway they discharge their lassoes, which end in a noose; then, whatever the noose encircles, be it man or be it horse, they drag towards them; and the foe, entangled in the toils, is forhwith slain.</p>
+</blockquote>
+<p>Yee-haw. In Book 7, Paragraph 204, we are introduced to Leonidas. And if you were asking yourself who Leonidas is you would be in luck reading this paragraph, which contains all relevant information:</p>
+<blockquote>
+<p>[&hellip;] Now Leonidas was the son of Anaxandridas, who was son of Leo, who was the son of Eurycratidas, who was the son of Anaxander, who was the son of Eurycrates, who was the son of Polydorus, who was the son of Alcamenes, who was the son of Telecles, who was the son Archelaüs, who was the son of Agesilaüs, who was the son of Doryssus, who was the son of Labotas, who was the son of Echestratus, who was the son of Agis, who was the son of Eurysthenes, who was the son of Aristodemus, who was the son of Aristomachus, who was the son of Cleodaeus, who was the son of Hyllus, who was the son of Heracles.</p>
+</blockquote>
+<p>A part of me feels a very strong, irrational wish to learn all of it heart.</p>
+<p>It is the kind of book that should be read again every once in a while - something I usually not to do, and that if I were to do usually, I would still not do with this particular book. But a good read.</p>
 
       </article>
       
@@ -202,13 +175,13 @@ As mentioned, the folder structure one needs is slightly different from the one 
     <nav class="end-nav side-padding">
       
       <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
-  href="https://naelvis.github.io/refactored-happiness/posts/do-not-say-we-have-nothing-m-thien/" class="card blog-card" rel="bookmark" >
+  href="https://naelvis.github.io/refactored-happiness/posts/dschinns-f-aydemir/" class="card blog-card" rel="bookmark" >
   
   <article class="card-body">
-    <h2 class="card-title">Do not say we have nothing - M. Thien</h2>
+    <h2 class="card-title">Dschinns - F. Aydemir</h2>
     <p class="card-text"></p>
     <div class="card-subtext muted-text">
-      <p>Posted <time datetime="2020-12-13 1213:00">Dec 13, 2020</time></p>
+      <p>Posted <time datetime="2023-04-15 415:00">Apr 15, 2023</time></p>
       <p>#Lesenotizen </p>
     </div>
   </article>

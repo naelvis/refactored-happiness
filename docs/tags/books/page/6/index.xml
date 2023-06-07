@@ -5,11 +5,25 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tecnica mista su tappeto - F. Battiato</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/tecnica-mista-su-tappeto-f-battiato/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/tecnica-mista-su-tappeto-f-battiato/</guid>
+      <description></description>
+    </item><item>
+      <title>David Copperfield - C. Dickens</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/david-copperfield-c-dickens/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/david-copperfield-c-dickens/</guid>
+      <description></description>
+    </item><item>
       <title>Die Physiker - F. Dürrenmatt</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/die-physiker-f-d%C3%BCrrenmatt/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
@@ -64,20 +78,6 @@
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/travels-in-the-land-of-serpents-and-pearls-m-polo/</guid>
-      <description></description>
-    </item><item>
-      <title>The unbearable lightness of being - M. Kundera</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-unbearable-lightness-of-being-m-kundera/</link>
-      <pubDate>Sat, 06 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-unbearable-lightness-of-being-m-kundera/</guid>
-      <description></description>
-    </item><item>
-      <title>The shortest history of Germany - J. Hawes</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-shortest-history-of-germany-j-hawes/</link>
-      <pubDate>Tue, 23 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-shortest-history-of-germany-j-hawes/</guid>
       <description></description>
     </item>
   </channel>

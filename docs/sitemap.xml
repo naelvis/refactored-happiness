@@ -4,12 +4,37 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/books/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/categories/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/categories/lesenotizen/</loc>
+    <lastmod>2023-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
+    <lastmod>2023-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
+    <lastmod>2023-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/the-botany-of-desire-m-pollan/</loc>
+    <lastmod>2023-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/histories-herodotus/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -19,21 +44,6 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/posts/elizabeth-finch-j-barnes/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/categories/lesenotizen/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/posts/</loc>
-    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/tags/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,12 +83,7 @@
   </url>
   
   <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/jonathan-strange-mr-norrell-s-clarke/</loc>
-    <lastmod>2022-12-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
+    <loc>https://naelvis.github.io/refactored-happiness/posts/jonathan-strange-mr-norrell-s-clarke/</loc>
     <lastmod>2022-12-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -434,6 +439,11 @@
   
   <url>
     <loc>https://naelvis.github.io/refactored-happiness/tags/general/</loc>
+    <lastmod>2020-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://naelvis.github.io/refactored-happiness/post/</loc>
     <lastmod>2020-12-28T00:00:00+00:00</lastmod>
   </url>
   
