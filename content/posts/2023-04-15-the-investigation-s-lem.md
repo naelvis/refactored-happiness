@@ -1,5 +1,5 @@
 ---
-title: The investigation - S. Lem*
+title: The investigation - S. Lem
 author: nelvis
 date: '2023-04-15'
 slug: the-investigation-s-lem
