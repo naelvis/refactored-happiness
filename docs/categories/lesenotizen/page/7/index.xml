@@ -5,11 +5,18 @@
     <description>Recent content in Lesenotizen on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The map and the territory -  M. Houellebecq</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-map-and-the-territory-m-houellebecq/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-map-and-the-territory-m-houellebecq/</guid>
+      <description></description>
+    </item><item>
       <title>Voyage dans la lune - C. de Bergerac</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/voyage-dans-la-lune-c-de-bergerac/</link>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
@@ -71,13 +78,6 @@
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/shakespeare-s-royal-self-j-kirsch/</guid>
-      <description></description>
-    </item><item>
-      <title>Do not say we have nothing - M. Thien</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/do-not-say-we-have-nothing-m-thien/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/do-not-say-we-have-nothing-m-thien/</guid>
       <description></description>
     </item>
   </channel>
