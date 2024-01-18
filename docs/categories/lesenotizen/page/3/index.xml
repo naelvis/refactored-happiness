@@ -5,11 +5,25 @@
     <description>Recent content in Lesenotizen on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>The elements of drawing - J. Ruskin</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/the-elements-of-drawing-j-ruskin/</link>
+      <pubDate>Sun, 04 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/the-elements-of-drawing-j-ruskin/</guid>
+      <description></description>
+    </item><item>
+      <title>A short philosophy of birds - P. J. Dubois, E. Rousseau</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/a-short-philosophy-of-birds-p-j-dubois-e-rousseau/</link>
+      <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/a-short-philosophy-of-birds-p-j-dubois-e-rousseau/</guid>
+      <description></description>
+    </item><item>
       <title>Fondamenta degli incurabili - I. Brodskij</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/fondamenta-degli-incurabili-i-brodskij/</link>
       <pubDate>Tue, 23 Aug 2022 00:00:00 +0000</pubDate>
@@ -64,20 +78,6 @@
       <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/la-maschera-di-dimitrios-e-ambler/</guid>
-      <description></description>
-    </item><item>
-      <title>Concrete island - J.G. Ballard</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/concrete-island-j-g-ballard/</link>
-      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/concrete-island-j-g-ballard/</guid>
-      <description></description>
-    </item><item>
-      <title>Dune - F. Herbert</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/dune-f-herbert/</link>
-      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/dune-f-herbert/</guid>
       <description></description>
     </item>
   </channel>

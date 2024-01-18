@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+	<script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/html5shiv.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/bootstrap/shim/respond.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/navigation/tabsets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/highlightjs/default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/highlightjs/highlight.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/htmlwidgets/htmlwidgets.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leafletfix/leafletfix.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4-compressed.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/Proj4Leaflet/proj4leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-measure/leaflet-measure.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/L.Graticule.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-graticule/Graticule-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/L.Terminator.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-terminator/Terminator-binding.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Control.MiniMap.min.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-minimap/Minimap-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/easy-button.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-easybutton/EasyButton-binding.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+	<link href="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+	<script src="https://rstudio.github.io/leaflet/libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+	<link href="https://rstudio.github.io/leaflet/libs/ionicons/ionicons.min.css" rel="stylesheet" />
+	
+	
+	
+	
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-prod.js"></script>
+	<script src="https://dieghernan.github.io/js/leaflet_extras/lfx-heat/lfx-heat-bindings.js"></script>
+	
+  <title>Various books - August to November 2023 &middot; refactored happiness</title>
+  <meta name="description" content="" />
+  <meta property="og:locale" content="en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="r-h">
+<meta property="og:description" content="my blog">
+<meta property="og:url" content="https://naelvis.github.io/refactored-happiness/posts/various-books-august-to-november-2023/">
+<meta property="og:site_name" content="r-h">
+<meta property="og:image" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="r-h">
+<meta name="twitter:description" content="my blog">
+<meta name="twitter:site" content="https://naelvis.github.io/refactored-happiness/">
+<meta name="twitter:creator" content="">
+<meta name="twitter:image" content="https://naelvis.github.io/refactored-happiness/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://naelvis.github.io/refactored-happiness/css/concated.min.css" rel="stylesheet">
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-176386889-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <style>
+    body {
+      background: #ecedef url("https://naelvis.github.io/refactored-happiness/img/236_cut.png") repeat;
+    }
+  </style>
+
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://naelvis.github.io/refactored-happiness/" class="nav-text">r-h</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://naelvis.github.io/refactored-happiness/" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/cose/" class="hamburger-menu-overlay-link">Cose</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/places/" class="hamburger-menu-overlay-link">places</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/legenda/" class="hamburger-menu-overlay-link">Legenda</a></li>
+      <li><a href="https://naelvis.github.io/refactored-happiness/post/about/" class="hamburger-menu-overlay-link">About</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/code/" class="hamburger-menu-overlay-link">Code</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/lesenotizen/" class="hamburger-menu-overlay-link">Lesenotizen</a></li>
+      
+      <li><a href="https://naelvis.github.io/refactored-happiness/categories/poetry/" class="hamburger-menu-overlay-link">Poetry</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post ">
+        <header class="post-header">
+          <h1 class="post-title">Various books - August to November 2023</h1>
+          <p class="post-date">Posted <time datetime="2023-11-04">Nov 4, 2023</time></p>
+        </header>
+        
+        
+        <p>On the one hand I was busy with something else, on the other hand I have the impression that I somehow internalized the Lesenotizen and can still decently remember the important points about the last book I read. But I can also remember them because I think what I want to write in the Lesenotizen here, and so I think I need to write them even if I do not really need to write them for the books I am going to write them about.</p>
+<p>Also, I dread the perspective of having to write a series of single posts one after the other, so I decided to just pick some of the books and write about them und gut ist. I&rsquo;ll then try and resume the usual schedule, even if I would not mind starting to use the blog for something different.</p>
+<p>So here are the books:</p>
+<p><strong>The art thief - M. Finkel</strong></p>
+<p>This book is for me something like a very good joke told in a very bad way - it works in theory, it is thought through, all the right ingredients, but then the timing or the accent or a misspoken word or all of that and some more kills it and the joke falls flat and is forgotten with a snarl. But it would have deserved much more! It reminds me a bit of that biography of Dirac I read some time ago, if that biography of Dirac I read some time ago would not be one of the most poorly written things I ever read (maybe I&rsquo;ve been lucky), so I feel a bit guilty putting other books in its same buckets. This book is written by somebody who can write, it is just that it did not come out as it should have.</p>
+<p>Anyway. The build-up covers something like 85% of the book, which is a pity, because the ending is truly spectacular, but by the time you reach it you are exhausted. The reason why the author spends most of the book obsessively describing the pieces of art stolen is not really clear until the end is reached, but I would not blame anybody for dropping the book before that. There must be a better way to do it. Also not clear is the fact that the book is the result of (mainly) a long interview with the art thief. I think this also was thought to be a final surprise, which it is, but it also leads to confusion reading up - I want to know where all of this is coming from, I cannot be expected to suspend belief for a true story, not for so long. The fact that the thief is called by surname and his girlfriend/partner in crime by first name reflects the fact that this is how the thief itself named the duo, which is explained in the last part of the book - but throwing the asymmetry in without explanation and expecting me to eat it up somehow does not work. This is maybe the most prominent example, but no more than that.</p>
+<p>The story itself is mental and I would still recommend the book - maybe one could leave out some chapters or ask some LLM to summarise them. The main takeaway for me is the realization of how many of the good things we have are not due to a law/punishment mechanics, but to the good commonwill of the society. It is clear (clearer after having read this book) that you cannot have people constantly guarding every work of art in every big and small museum and church of the world, and so it is clear that it is possible to steal them&hellip; but why would you? It is somehow priced in that occasionally something disappears, and maybe that&rsquo;s even okay by some parameters, but the reason why this does not constantly happen all the time is not that it is impossible because of strict guarding and punishment, it is more (I think) that people don&rsquo;t do it because that&rsquo;s just not something you do. Then stealing the Mona Lisa is of course something you do, if you can, so that&rsquo;s why the Mona Lisa is well guarded.</p>
+<p>What I am trying to say is that if you steal the Mona Lisa if you are deplorable in a cool way - people would be like, that&rsquo;s not good, but tell me how you managed!!! -, while stealing the late Renaissance painting from the local museum is just deplorable. Maybe I am really just too simplistic about this, but that was the takeaway for me.</p>
+<p><strong>A Book of Dreams - P. Reich</strong></p>
+<p>I read the book during/after the weeks in which I obsessively listened to Cloudbusting. The main thing I derive from the book is a great respect for Kate Bush - my line of thinking for deciding to read it was that since the song was but a derivation from the book, the book must contain so much more than the song and be much better, a bit like the Harry Potter books are much better than the movies.</p>
+<p>I was wrong about this - the book just flowed through me, and while I can of course understand that is strictly related to the song, there is clearly an intermediate step in the chain that connects the book to the song, and that&rsquo;s Kate Bush&rsquo;s head. I am not saying the song is a masterpiece, I am saying it is quite certainly not a direct derivation, there is a lot of work in processing and reformulating the book that went into it, and that&rsquo;s something I was not expecting and I deeply respect. Then there is the personal fact that I really like the song and I find the book meh, that amplifies the sensation.</p>
+<p>One example - I write it down because I am eventually going to forget - is the yo-yo thing. The author has to bury his fluorescent yo-yo because his father thinks fluorescence is a health hazard - so there is this place in the garden where the yo-yo is buried and only the author knows where it is and it is somehow a nice little tunnel where you can put your hand in and find the yo-yo which is safe and clean. Then there is the part where the father is in trouble with the police, and ultimately dies in jail, and the author is a child at this moment and can really just watch while things happen.
+Now the whole link between the yo-yo and the father, which is prominent in the song, is something which I think is just not in the book. I cannot exclude it is thrown in a sentence somewhere, but it is certainly not central. My expectation was to have a chapter called THE YO-YO when the whole thing is worked out, and then the song somehow summarised the chapter. The whole thing has instead apparently being worked out in Kate Bush&rsquo;s head, and she then wrote a song about it. I like it!</p>
+<p>While flipping through the book I saw I bookmarked a page where the expression &ldquo;thank-you-ma&rsquo;am&rdquo; is used to describe a bump in the road you go over with a car and I find it hilarious and quintessentially British. After a quick research it seems like this is only used in US English and it originated in the US in the nineteenth century, so there&rsquo;s that as well.</p>
+<p><strong>The Signal and the Noise - N. Silver</strong></p>
+<p>I really like Nate Silver and I am really sorry he&rsquo;s not at fivethirtyeight anymore. This is a book about how to use data to make forecasts, it outlines many statistical and psychological pitfalls and is a very interesting read. There are some papers by Aaron Clauset cited here which I would like to read.</p>
+<p>I marked a lot of pages in this book and I do not want to go over all of them. The one thing I want to mention is that the one example of where Pareto laws fail (page 442) is clearly not correct, and updating the plot in that page would just deliver one of the many plot Taleb has in his papers.</p>
+<p><strong>Blackwater (I-VI) - M. McDowell</strong></p>
+<p>I read this in Italian - in the edition of Neri Pozza, the books are just very beautiful to look at and make you want to read them. It is also a very easy read and I am not sure why they would be classified as horrors, they are very mild, I like the &ldquo;southern Gothic&rdquo; label more. This is more entertainment reading than anything else, but I liked the way the author deals with discrimination, of all kinds, in Alabama without ever having a preachy tone.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/posts/1788-w-tench/" class="card blog-card" rel="bookmark" >
+  
+  <article class="card-body">
+    <h2 class="card-title">1788 - W. Tench</h2>
+    <p class="card-text"></p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2023-08-06 86:00">Aug 6, 2023</time></p>
+      <p>#Lesenotizen </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://naelvis.github.io/refactored-happiness/" class="card home-card" style="background-image: url( https://naelvis.github.io/refactored-happiness/img/boat_background.png )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://naelvis.github.io/refactored-happiness/js/core.min.js"></script>
+
+  </body>
+</html>

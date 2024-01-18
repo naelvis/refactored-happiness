@@ -5,11 +5,25 @@
     <description>Recent content in books on refactored happiness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://naelvis.github.io/refactored-happiness/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Various books - November 2023 to January 2024</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/various-books-november-2023-to-january-2024/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/various-books-november-2023-to-january-2024/</guid>
+      <description></description>
+    </item><item>
+      <title>Various books - August to November 2023</title>
+      <link>https://naelvis.github.io/refactored-happiness/posts/various-books-august-to-november-2023/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://naelvis.github.io/refactored-happiness/posts/various-books-august-to-november-2023/</guid>
+      <description></description>
+    </item><item>
       <title>1788 - W. Tench</title>
       <link>https://naelvis.github.io/refactored-happiness/posts/1788-w-tench/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
@@ -64,20 +78,6 @@
       <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://naelvis.github.io/refactored-happiness/posts/the-secret-history-d-tartt/</guid>
-      <description></description>
-    </item><item>
-      <title>The ladies of Grace Adieu - S. Clarke</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/the-ladies-of-grace-adieu-s-clarke/</link>
-      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/the-ladies-of-grace-adieu-s-clarke/</guid>
-      <description></description>
-    </item><item>
-      <title>Die Erweiterung - R. Menasse</title>
-      <link>https://naelvis.github.io/refactored-happiness/posts/die-erweiterung-r-menasse/</link>
-      <pubDate>Thu, 29 Dec 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://naelvis.github.io/refactored-happiness/posts/die-erweiterung-r-menasse/</guid>
       <description></description>
     </item>
   </channel>
